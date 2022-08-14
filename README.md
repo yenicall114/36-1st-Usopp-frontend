@@ -59,7 +59,9 @@
 
         - eslintcache
 
-        eslint는 lint 검사를 할 때마다 .eslintcache 파일을 생성하고 업데이트합니다. .eslintcache 파일 안에 기존에 lint 검사를 한 내역을 저장해두어서 매번 전체 파일을 검사하는 것이 아니라 변경된 파일에 대해서만 lint 검사를 할 수 있습니다. 이 파일의 목적상, git으로 관리할 필요가 없으므로 .gitignore에 추가해주어야 합니다.
+        eslint는 lint 검사를 할 때마다 .eslintcache 파일을 생성하고 업데이트합니다. 
+        .eslintcache 파일 안에 기존에 lint 검사를 한 내역을 저장해두어서 매번 전체 파일을 검사하는 것이 아니라 변경된 파일에 대해서만 lint 검사를 할 수 있습니다.
+        이 파일의 목적상, git으로 관리할 필요가 없으므로 .gitignore에 추가해주어야 합니다.
 
         // .gitignore
 
