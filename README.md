@@ -1,7 +1,7 @@
- # React 프로젝트 초기세팅 방법을 기록하였다
+# React 프로젝트 초기세팅 방법을 기록하였다
 
-    
-    
+    해당 파일은 기본적 세팅이 되어 있다. (sass사용)
+
     -#### 1. 소문자(kebab-case로 작성하는 것이 일반적)로 작성하여 프로젝트를 설치합니다.
 
         npx create-react-app [프로젝트명]
@@ -24,14 +24,14 @@
 
     -#### 4. ESLint,Prettier
         둘 다 동시에 설치 할수 있습니다.
-        
+
             npm install -D prettier eslint-config-prettier eslint-plugin-prettier
 
     ## 추천 세팅
 
         다양한 설정파일이 존재할 때에는 차례대로 적용한 뒤 마지막에 적용되는 설정이 최종적으로 적용되기 때문에 settings.json → .editorconfig → .prettierrc 순서로 설정이 적용됩니다.
         아래 설정들은 자동으로 포맷팅 하기 위한 최소한의 사항일 뿐이기 때문에 **팀 컨벤션에 따라 원하는 옵션을 추가하거나, 빼도 무방합니다.** 더 자세한 내용은 공식문서에 잘 나와 있으니 참고해 보세요.
-        settins.json, .eslintrc, .prettierrc 파일을 아래와 같이 프로젝트 루트 폴더에 생성하고 내용을 기입하면, 프로젝트에 한해서, 해당 설정이 우선으로 적용됩니다.
+        settings.json, .eslintrc, .prettierrc 파일을 아래와 같이 프로젝트 루트 폴더에 생성하고 내용을 기입하면, 프로젝트에 한해서, 해당 설정이 우선으로 적용됩니다.
 
     -#### 5. .vscode/settings.json
 
@@ -51,7 +51,7 @@
                 "eslint.alwaysShowStatus": true,
                 "files.autoSave": "onFocusChange"
                 }
-    
+
     -#### 6. eslintrc
         프로젝트 최상위에 .eslintrc 파일을 만들어 아래의 코드를 입력해주세요. 팀원이 모두 맥 유저일 경우와, 그렇지 않은 경우의 세팅이 다르니 확인 후에 적용해주세요.
 
@@ -120,15 +120,15 @@
 
         -#### 7. prettierrc
 
-        프로젝트 최상위에 .prettierrc 파일을 만들어 아래의 코드를 입력해주세요. 
+        프로젝트 최상위에 .prettierrc 파일을 만들어 아래의 코드를 입력해주세요.
 
 
                 // .prettierrc
 
                     {
-                    "tabWidth": 2, 
-                    "endOfLine": "lf", 
-                        "arrowParens": "avoid", 
+                    "tabWidth": 2,
+                    "endOfLine": "lf",
+                        "arrowParens": "avoid",
                         "singleQuote": true,
                     }
 
@@ -143,9 +143,8 @@
         eslint-plugin-prettier 설치 후 context.getPhysicalFilename is not a function 에러가 발생하는 경우가 있습니다. CRA에 내장된 eslint 버전은 7.28.0 인데, eslint-plugin-prettier, eslint-config-prettier에서 요구되는 eslint 버전은 7.32 이상이라서 발생하는 문제입니다. 최신 버전의 npm(v8)은 install 시에 이런 문제를 파악하고 자동으로 업데이트 해주기 때문에 문제가 발생하지 않지만 구 버전의 npm(v6~7)의 경우에는 해결해주지 않아서 위와 같은 에러 발생하게 됩니다.  아래와 같이 npm을 업데이트하고 package를 삭제 후 재설치하는 과정을 통해서 해결할 수 있습니다.
 
         1. `npm install npm@latest -g`
-        2. `npm -v` 
+        2. `npm -v`
         3. `npm uninstall -D eslint-config-prettier eslint-plugin-prettier`
         4. `npm install -D eslint-config-prettier eslint-plugin-prettier`
-
 
 # 마지막으로 파일구조.png를 참고하세요
