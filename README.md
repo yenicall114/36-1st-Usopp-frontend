@@ -6,12 +6,12 @@
 
         npx create-react-app [프로젝트명]
 
-    -#### 2. Routing
+    #### 2. Routing
         라우팅 기능을 추가하기 위해, 많이 사용되고 있는 react-router-dom을 설치합니다.
 
             npm install react-router-dom
 
-    -#### 3. Styling
+    #### 3. Styling
         스타일링을 위해 Sass와, styled-components 중에서 각 프로젝트에서 필요한 라이브러리를 설치합니다.
 
         - Sass
@@ -22,15 +22,17 @@
 
             npm install styled-components styled-reset
 
-    -#### 4. ESLint,Prettier
+    #### 4. ESLint,Prettier
         둘 다 동시에 설치 할수 있습니다.
 
             npm install -D prettier eslint-config-prettier eslint-plugin-prettier
 
     ## 추천 세팅
 
-        다양한 설정파일이 존재할 때에는 차례대로 적용한 뒤 마지막에 적용되는 설정이 최종적으로 적용되기 때문에 settings.json → .editorconfig → .prettierrc 순서로 설정이 적용됩니다.
-        아래 설정들은 자동으로 포맷팅 하기 위한 최소한의 사항일 뿐이기 때문에 **팀 컨벤션에 따라 원하는 옵션을 추가하거나, 빼도 무방합니다.** 더 자세한 내용은 공식문서에 잘 나와 있으니 참고해 보세요.
+        다양한 설정파일이 존재할 때에는 차례대로 적용한 뒤 마지막에 적용되는 설정이 최종적으로 적용되기 때문에 
+        settings.json → .editorconfig → .prettierrc 순서로 설정이 적용됩니다.
+        아래 설정들은 자동으로 포맷팅 하기 위한 최소한의 사항일 뿐이기 때문에 **팀 컨벤션에 따라 원하는 옵션을 추가하거나, 빼도 무방합니다.
+        ** 더 자세한 내용은 공식문서에 잘 나와 있으니 참고해 보세요.
         settings.json, .eslintrc, .prettierrc 파일을 아래와 같이 프로젝트 루트 폴더에 생성하고 내용을 기입하면, 프로젝트에 한해서, 해당 설정이 우선으로 적용됩니다.
 
     -#### 5. .vscode/settings.json
