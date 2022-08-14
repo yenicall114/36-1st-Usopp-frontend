@@ -142,7 +142,11 @@
 
         ###  context.getPhysicalFilename is not a function 에러
 
-        eslint-plugin-prettier 설치 후 context.getPhysicalFilename is not a function 에러가 발생하는 경우가 있습니다. CRA에 내장된 eslint 버전은 7.28.0 인데, eslint-plugin-prettier, eslint-config-prettier에서 요구되는 eslint 버전은 7.32 이상이라서 발생하는 문제입니다. 최신 버전의 npm(v8)은 install 시에 이런 문제를 파악하고 자동으로 업데이트 해주기 때문에 문제가 발생하지 않지만 구 버전의 npm(v6~7)의 경우에는 해결해주지 않아서 위와 같은 에러 발생하게 됩니다.  아래와 같이 npm을 업데이트하고 package를 삭제 후 재설치하는 과정을 통해서 해결할 수 있습니다.
+        eslint-plugin-prettier 설치 후 context.getPhysicalFilename is not a function 에러가 발생하는 경우가 있습니다. 
+        CRA에 내장된 eslint 버전은 7.28.0 인데, eslint-plugin-prettier, eslint-config-prettier에서 요구되는 eslint 버전은 7.32 이상이라서 발생하는 문제입니다. 
+        최신 버전의 npm(v8)은 install 시에 이런 문제를 파악하고 자동으로 업데이트 해주기 때문에 문제가 발생하지 않지만 
+        구 버전의 npm(v6~7)의 경우에는 해결해주지 않아서 위와 같은 에러 발생하게 됩니다.  아래와 같이 npm을 업데이트하고 
+        package를 삭제 후 재설치하는 과정을 통해서 해결할 수 있습니다.
 
         1. `npm install npm@latest -g`
         2. `npm -v`
