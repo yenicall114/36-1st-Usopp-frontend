@@ -1,6 +1,5 @@
 # 팀명 우솝
 
-![스크린샷 2022-05-27 오후 5.33.15.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9fd2fd6-3d4a-469a-97e8-f43e8afaae39/스크린샷_2022-05-27_오후_5.33.15.png)
 
 # 1. 팀 소개
 
