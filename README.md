@@ -99,7 +99,7 @@
 
 </aside>
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45492266-14b4-4b22-86d1-0de3ede79474/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45492266-14b4-4b22-86d1-0de3ede79474/Untitled.png)
+
 
 # 5. 개선 사항
 
