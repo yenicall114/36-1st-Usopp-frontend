@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Nav from './nav/Nav';
-import Login from './login/Login';
-import Main from './main/Main';
-import './styles/common.scss';
+import Nav from './Components/Nav/Nav';
+import Login from './pages/Login/Login';
+import Main from './pages/Main/Main';
 import './styles/reset.scss';
+import './styles/common.scss';
 
 const Router = () => {
   return (
