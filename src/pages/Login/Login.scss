@@ -1,0 +1,107 @@
+@media only screen and (min-width: 640px) {
+  .modal {
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 50px;
+  }
+}
+//  메인이랑 합칠 시 모달이 띄워 줄 때  적용되어야하는 코드
+body {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: #fffef2;
+  color: rgba(0, 0, 0, 0.4);
+  height: auto;
+  position: fixed;
+  left: 50%;
+  top: 60px;
+  margin-left: -275px;
+  width: 100%;
+
+  .iconPositon {
+    position: relative;
+
+    .modalTop {
+      padding-bottom: 30px;
+
+      .modalTitle {
+        font-size: 42px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        color: black;
+      }
+    }
+
+    .modalSub {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .nameInput {
+      display: flex;
+      justify-content: space-around;
+
+      input {
+        background-color: transparent;
+        width: 200px;
+        height: 40px;
+        padding: 8px 0;
+        line-height: 1;
+        border: solid rgba(51, 51, 51, 0.2);
+        border-width: 0 0 1px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .nameInput {
+      display: flex;
+      justify-content: space-around;
+
+      input {
+        background-color: transparent;
+        width: 200px;
+        height: 40px;
+        padding: 8px 0;
+        line-height: 1;
+        border: solid rgba(51, 51, 51, 0.2);
+        border-width: 0 0 1px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .check-box {
+      p {
+        display: inline;
+      }
+
+      .terms {
+        font-weight: 550;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      height: 60px;
+      background-color: #333;
+      margin: 25px 0 0;
+
+      span {
+        color: #fffef2;
+      }
+    }
+    p {
+      padding-top: 10px;
+      text-align: center;
+    }
+    .fi {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
