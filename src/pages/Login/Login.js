@@ -3,7 +3,7 @@ import Input from './Input/Input';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('signUp');
+  const [signMode, setSignMode] = useState('sign');
   const [inputValue, setInputValue] = useState({
     '이메일 주소': '',
     패스워드: '',
@@ -13,6 +13,13 @@ const Login = () => {
   });
 
   const [checkBox, setCheckBox] = useState({ first: false, second: false });
+
+  const disabled =
+    inputValue['이메일 주소'].includes('@') &&
+    inputValue['이메일 주소'].includes('.com') &&
+    inputValue['이메일 주소'].length >= 5;
+
+  const btnColor = disabled ? '#333' : '#cecccc';
 
   const checked = e => {
     const { name } = e.target;
@@ -146,7 +153,12 @@ const Login = () => {
               <p onClick={signIn}>이솝 계정을 가지고 계십니까?</p>
             </>
           ) : (
-            <button className="btn" onClick={confirm}>
+            <button
+              className="btn"
+              onClick={confirm}
+              disabled={!disabled}
+              style={{ backgroundColor: btnColor }}
+            >
               <span> 계속</span>
             </button>
           )}
