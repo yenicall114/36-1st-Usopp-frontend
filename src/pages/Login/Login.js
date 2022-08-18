@@ -3,7 +3,7 @@ import Input from './Input/Input';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('signIn');
+  const [signMode, setSignMode] = useState('sign');
   const [inputValue, setInputValue] = useState({
     '이메일 주소': '',
     패스워드: '',
@@ -103,11 +103,21 @@ const Login = () => {
             </div>
           </div>
           {signMode === 'sign' ? (
-            <Input
-              sign={SIGN.sign}
-              inputValue={inputValue}
-              saveInput={saveInput}
-            />
+            <>
+              <Input
+                sign={SIGN.sign}
+                inputValue={inputValue}
+                saveInput={saveInput}
+              />
+              <button
+                className="btn"
+                onClick={confirm}
+                disabled={!signDisabled}
+                style={{ backgroundColor: signBtnColor }}
+              >
+                <span> 계속</span>
+              </button>
+            </>
           ) : signMode === 'signIn' ? (
             <>
               <Input
@@ -124,14 +134,6 @@ const Login = () => {
                 <span> 계속</span>
               </button>
               <p onClick={signIn}>회원이 아니십니까?</p>
-              <button
-                className="btn"
-                onClick={confirm}
-                disabled={!signDisabled}
-                style={{ backgroundColor: signBtnColor }}
-              >
-                <span> 계속</span>
-              </button>
             </>
           ) : (
             <>
