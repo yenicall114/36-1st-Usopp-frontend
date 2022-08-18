@@ -1,0 +1,155 @@
+export const NAVBARDATA_TEXT = [
+  {
+    id: 0,
+    mainMenu: '스킨 케어',
+    subMenu: {
+      left: [
+        { id: 1, name: '카테고리' },
+        { id: 2, name: '스킨 케어 모두 보기' },
+        { id: 3, name: '클렌저' },
+        { id: 4, name: '각질 제거' },
+        { id: 5, name: '트리트먼트 & 마스크' },
+        { id: 6, name: '토너' },
+        { id: 7, name: '하이드 레이터' },
+        { id: 8, name: '립 & 아이' },
+        { id: 9, name: '쉐이빙' },
+        { id: 10, name: '선 케어' },
+        { id: 11, name: '키트' },
+        { id: 12, name: '스킨 케어 세트 추천' },
+        { id: 13, name: '스킨 케어 기프트' },
+      ],
+      right: [
+        { id: 1, name: '피부타입' },
+        { id: 2, name: '중성' },
+        { id: 3, name: '건성' },
+        { id: 4, name: '지성' },
+        { id: 5, name: '복합성' },
+      ],
+    },
+  },
+  {
+    id: 1,
+    mainMenu: '바디 & 핸드',
+    subMenu: {
+      left: [
+        { id: 1, name: '카테고리' },
+        { id: 2, name: '바디 & 핸드 모두 보기' },
+        { id: 3, name: '핸드' },
+        { id: 4, name: '바디' },
+        { id: 5, name: '퍼스널 케어' },
+        { id: 6, name: '번들' },
+        { id: 7, name: '핸드 및 바디 케어 기프트' },
+      ],
+      right: [
+        { id: 1, name: '레인지' },
+        { id: 2, name: '제라늄 리프' },
+      ],
+    },
+  },
+  {
+    id: 2,
+    mainMenu: '헤어',
+    subMenu: {
+      left: [
+        { id: 1, name: '카테고리' },
+        { id: 2, name: '헤어 모두 보기' },
+        { id: 3, name: '샴푸' },
+        { id: 4, name: '컨디셔너' },
+        { id: 5, name: '트리트먼트' },
+        { id: 6, name: '그루밍' },
+      ],
+      right: [
+        { id: 1, name: '조화로운 설렉션' },
+        { id: 2, name: '샴푸' },
+        { id: 3, name: '컨디셔너' },
+        { id: 4, name: '테임 헤어 세럼' },
+      ],
+    },
+  },
+  {
+    id: 3,
+    mainMenu: '향수',
+    subMenu: {
+      left: [
+        { id: 1, name: '향수' },
+        { id: 2, name: '향수 모두 보기' },
+        { id: 3, name: '미라세티' },
+        { id: 4, name: '카르스트' },
+        { id: 5, name: '에레미아' },
+        { id: 6, name: '로즈' },
+        { id: 7, name: '휠' },
+        { id: 8, name: '마라케시' },
+        { id: 9, name: '테싯' },
+      ],
+      right: [
+        { id: 1, name: '향수 아로마' },
+        { id: 2, name: '플로럴' },
+        { id: 3, name: '프레쉬' },
+        { id: 4, name: '우디' },
+        { id: 5, name: '오퓰런트' },
+      ],
+    },
+  },
+  {
+    id: 4,
+    mainMenu: '홈',
+    subMenu: {
+      left: [
+        { id: 1, name: '카테고리' },
+        { id: 2, name: '홈 모두 보기' },
+        { id: 3, name: '홈' },
+        { id: 4, name: '문학' },
+        { id: 5, name: '홈 케어 기프트' },
+      ],
+      right: [
+        { id: 1, name: '사랑받는 제품' },
+        { id: 2, name: '프톨레미 아로마틱 캔들' },
+        { id: 3, name: '갈리푸스 아로마틱 캔들' },
+      ],
+    },
+  },
+  {
+    id: 5,
+    mainMenu: '키트 & 여행 제품',
+    subMenu: {
+      left: [
+        { id: 1, name: '카테고리' },
+        { id: 2, name: '키트 & 여행 제품 모두 보기' },
+        { id: 3, name: '시즈널 기프트 키트' },
+        { id: 4, name: '스킨케어 키트' },
+        { id: 5, name: '바디 & 핸드 케어 키트' },
+        { id: 6, name: '여행' },
+      ],
+      right: [
+        { id: 1, name: '여행의 동반자' },
+        { id: 2, name: '진저 플라이트' },
+        { id: 3, name: '어라이벌' },
+        { id: 4, name: '이솝 & 릭 오웬스 트래블 키트' },
+      ],
+    },
+  },
+  {
+    id: 6,
+    mainMenu: '기프트 가이드',
+    subMenu: {
+      left: [
+        { id: 1, name: '기프트 가이드' },
+        { id: 2, name: '전체 기프트' },
+        { id: 3, name: '시즈널 기프트 키트' },
+        { id: 4, name: '이솝에서 사랑받는 제품들' },
+        { id: 5, name: '관대한 선물' },
+        { id: 6, name: '기프트 번들' },
+        { id: 7, name: '홈 케어 기프트' },
+        { id: 8, name: '나를 위한 선물' },
+        { id: 9, name: '트래블 기프트' },
+        { id: 10, name: '작은 제스처' },
+      ],
+      right: [
+        { id: 1, name: '감각적인 축하' },
+        { id: 2, name: '더 포레저' },
+        { id: 3, name: '더 리스너' },
+        { id: 4, name: '태싯 오 드 퍼퓸' },
+      ],
+    },
+  },
+];
