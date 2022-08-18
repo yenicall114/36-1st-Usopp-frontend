@@ -2,16 +2,16 @@
   position: relative;
 
   input {
-    background-color: transparent;
     width: 450px;
     height: 40px;
-    padding: 8px 0;
-    font-size: 20px;
-    line-height: 1;
-    border: solid rgba(51, 51, 51, 0.2);
-    border-width: 0 0 1px;
     margin-top: 30px;
     margin-bottom: 40px;
+    padding: 8px 0;
+    background-color: transparent;
+    border: solid rgba(51, 51, 51, 0.2);
+    border-width: 0 0 1px;
+    font-size: 20px;
+    line-height: 1;
 
     &:focus {
       outline: none;

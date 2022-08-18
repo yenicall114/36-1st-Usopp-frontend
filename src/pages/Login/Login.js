@@ -5,7 +5,7 @@ import SignIn from './SignMode/SignIn';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('sign');
+  const [signMode, setSignMode] = useState('signIn');
   const [inputValue, setInputValue] = useState({
     email: '',
     password: '',
