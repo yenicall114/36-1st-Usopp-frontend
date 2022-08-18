@@ -57,29 +57,8 @@ body {
       }
     }
 
-    .nameInput {
-      display: flex;
-      justify-content: space-around;
-
-      input {
-        background-color: transparent;
-        width: 200px;
-        height: 40px;
-        padding: 8px 0;
-        line-height: 1;
-        border: solid rgba(51, 51, 51, 0.2);
-        border-width: 0 0 1px;
-        margin-top: 30px;
-        margin-bottom: 40px;
-      }
-    }
-
-    .check-box {
-      p {
-        display: inline;
-      }
-
-      .terms {
+    .terms {
+      .checkBox {
         font-weight: 550;
       }
     }
@@ -95,7 +74,7 @@ body {
         color: #fffef2;
       }
     }
-    p {
+    .under {
       padding-top: 10px;
       text-align: center;
       cursor: pointer;
