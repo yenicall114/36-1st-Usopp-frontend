@@ -3,7 +3,7 @@ import Input from './Input/Input';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('singUp');
+  const [signMode, setSignMode] = useState('signIn');
   const [inputValue, setInputValue] = useState({
     '이메일 주소': '',
     패스워드: '',
@@ -109,20 +109,37 @@ const Login = () => {
               saveInput={saveInput}
             />
           ) : signMode === 'signIn' ? (
-            <Input
-              sign={SIGN.signIn}
-              inputValue={inputValue}
-              saveInput={saveInput}
-            />
-          ) : (
-            <Input
-              sign={SIGN.signUp}
-              inputValue={inputValue}
-              saveInput={saveInput}
-            />
-          )}
-          {signMode === 'signUp' && (
             <>
+              <Input
+                sign={SIGN.signIn}
+                inputValue={inputValue}
+                saveInput={saveInput}
+              />
+              <button
+                className="btn"
+                onClick={confirm}
+                disabled={!signDisabled}
+                style={{ backgroundColor: signBtnColor }}
+              >
+                <span> 계속</span>
+              </button>
+              <p onClick={signIn}>회원이 아니십니까?</p>
+              <button
+                className="btn"
+                onClick={confirm}
+                disabled={!signDisabled}
+                style={{ backgroundColor: signBtnColor }}
+              >
+                <span> 계속</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <Input
+                sign={SIGN.signUp}
+                inputValue={inputValue}
+                saveInput={saveInput}
+              />
               <div className="nameInput">
                 <input
                   placeholder="성"
@@ -155,10 +172,6 @@ const Login = () => {
                 />
                 <p className="terms">이용 약관에 동의합니다.</p>
               </div>
-            </>
-          )}
-          {signMode === 'signUp' ? (
-            <>
               <button
                 className="btn"
                 onClick={goToSignUP}
@@ -168,18 +181,6 @@ const Login = () => {
                 <span> 등록</span>
               </button>
               <p onClick={signIn}>이솝 계정을 가지고 계십니까?</p>
-            </>
-          ) : (
-            <>
-              <button
-                className="btn"
-                onClick={confirm}
-                disabled={!signDisabled}
-                style={{ backgroundColor: signBtnColor }}
-              >
-                <span> 계속</span>
-              </button>
-              <p onClick={signIn}>회원이 아니십니까?</p>
             </>
           )}
         </form>
