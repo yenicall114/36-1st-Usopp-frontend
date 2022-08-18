@@ -8,7 +8,6 @@ const Nav = () => {
   const [newNav, setNewNav] = useState(false);
   const apearPerfumeCategory = () => setNewNav(true);
   const [menuState, setMenuState] = useState();
-  const menuStateFunction = e => setMenuState(e);
 
   return (
     <div className="nav">
@@ -19,7 +18,7 @@ const Nav = () => {
               <NavTopCategorie
                 key={top.id}
                 id={top.id}
-                setMenuState={e => menuStateFunction(e)}
+                setMenuState={setMenuState}
                 setNewNav={() => apearPerfumeCategory()}
                 name={top.mainMenu}
               />
