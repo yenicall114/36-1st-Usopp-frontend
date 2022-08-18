@@ -63,20 +63,28 @@ const Main = () => {
               그리고 열정에서 영감을 받았습니다.
             </div>
             <a href="#" className="link">
-              로즈(2)
+              로즈 (2)
             </a>
           </div>
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg5.png"
+                  alt="상품이미지"
+                />
                 <div className="title">로즈앙상블</div>
                 <div className="price">246,000원</div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg2.png"
+                  alt="상품이미지"
+                />
                 <div className="title">로즈 오 드 퍼퓸</div>
                 <div className="price">195,000원</div>
               </a>
@@ -91,20 +99,28 @@ const Main = () => {
               숲을 방불케 합니다.
             </div>
             <a href="#" className="link">
-              휠(2)
+              휠 (2)
             </a>
           </div>
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg3.png"
+                  alt="상품이미지"
+                />
                 <div className="title">휠 앙상블</div>
                 <div className="price">219,000원</div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg4.png"
+                  alt="상품이미지"
+                />
                 <div className="title">휠 오드 퍼퓸</div>
                 <div className="price">145,000원</div>
               </a>
@@ -121,27 +137,39 @@ const Main = () => {
               있는 따뜻한 환대의 문화에서 영감을 얻어 탄생하였습니다.
             </div>
             <a href="#" className="link">
-              마라케시(2)
+              마라케시 (2)
             </a>
           </div>
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg5.png"
+                  alt="상품이미지"
+                />
                 <div className="title">마라케시 오 드 퍼퓸</div>
                 <div className="price">155,000원</div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg6.png"
+                  alt="상품이미지"
+                />
                 <div className="title">마라케시 인텐스 앙상블</div>
                 <div className="price">169,000원</div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg5.png"
+                  alt="상품이미지"
+                />
                 <div className="title">마라케시 인텐스 퍼퓸</div>
                 <div className="price">110,000원</div>
               </a>
@@ -156,20 +184,28 @@ const Main = () => {
               현대적 느낌을 풍기는 남녀 공용 향수입니다.
             </div>
             <a href="#" className="link">
-              테싯(2)
+              테싯 (2)
             </a>
           </div>
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg2.png"
+                  alt="상품이미지"
+                />
                 <div className="title">테싯 오 드 퍼퓸</div>
                 <div className="price">140,000원</div>
               </a>
             </li>
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg3.png"
+                  alt="상품이미지"
+                />
                 <div className="title">테싯 앙상블</div>
                 <div className="price">199,000원</div>
               </a>
@@ -191,7 +227,11 @@ const Main = () => {
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg4.png"
+                  alt="상품이미지"
+                />
                 <div className="title">에레미아 오 드 퍼퓸</div>
                 <div className="price">210,000원</div>
               </a>
@@ -213,7 +253,11 @@ const Main = () => {
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg5.png"
+                  alt="상품이미지"
+                />
                 <div className="title">카르스트 오 드 퍼퓸</div>
                 <div className="price">210,000원</div>
               </a>
@@ -235,7 +279,11 @@ const Main = () => {
           <ul className="item_list">
             <li>
               <a href="#">
-                <div className="img">이미지 영역</div>
+                <img
+                  className="img"
+                  src="/image/MainImg/mainImg6.png"
+                  alt="상품이미지"
+                />
                 <div className="title">미라세티 오 드 퍼퓸</div>
                 <div className="price">210,000원</div>
               </a>
@@ -257,7 +305,11 @@ const Main = () => {
             </button>
           </div>
           <div class="imgWrap">
-            <div className="img">이미지 영역</div>
+            <img
+              className="img"
+              src="/image/MainImg/mainImg7.png"
+              alt="상품이미지"
+            />
           </div>
         </div>
       </div>
