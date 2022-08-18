@@ -3,7 +3,7 @@ import Input from './Input/Input';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('signUp');
+  const [signMode, setSignMode] = useState('singUp');
   const [inputValue, setInputValue] = useState({
     '이메일 주소': '',
     패스워드: '',
@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   const signIn = () =>
-    signMode === 'signIn' ? setSignMode('singUp') : setSignMode('signIn');
+    signMode === 'signIn' ? setSignMode('signUp') : setSignMode('signIn');
 
   const confirm = e => {
     e.preventDefault();
