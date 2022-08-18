@@ -10,7 +10,7 @@ const Product = props => {
       <div className="info">
         <div className="title">{item.title}</div>
         <div className="text">{item.text}</div>
-        <a href="#" className="link">
+        <a href="http://localhost:3000/main" className="link">
           {item.title} (2)
         </a>
       </div>

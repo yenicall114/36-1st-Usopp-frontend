@@ -4,7 +4,6 @@ import './Option.scss';
 const Option = () => {
   return (
     <div className="MenuWrap">
-      <div className="Aroma"></div>
       <h5>아로마</h5>
       <ul>
         <li>모든 향</li>

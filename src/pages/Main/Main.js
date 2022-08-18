@@ -27,28 +27,28 @@ const Main = () => {
         <nav className="lnb">
           <ul className="lnbInner">
             <li>
-              <a href="#">향수</a>
+              <a href="http://localhost:3000/main">향수</a>
             </li>
             <li>
-              <a href="#">향수 모두 보기</a>
+              <a href="http://localhost:3000/main">향수 모두 보기</a>
             </li>
             <li>
-              <a href="#">미라세티</a>
+              <a href="http://localhost:3000/main">미라세티</a>
             </li>
             <li>
-              <a href="#">카르스트</a>
+              <a href="http://localhost:3000/main">카르스트</a>
             </li>
             <li>
-              <a href="#">에레미아</a>
+              <a href="http://localhost:3000/main">에레미아</a>
             </li>
             <li>
-              <a href="#">로즈</a>
+              <a href="http://localhost:3000/main">로즈</a>
             </li>
             <li>
-              <a href="#">휠</a>
+              <a href="http://localhost:3000/main">휠</a>
             </li>
             <li>
-              <a href="#">마라케시</a>
+              <a href="http://localhost:3000/main">마라케시</a>
             </li>
           </ul>
           <Filter filterChange={filterChange} />

@@ -6,7 +6,7 @@ const SubProduct = props => {
 
   return (
     <li>
-      <a href="#">
+      <a href="http://localhost:3000/main">
         <div className="imgBox">
           <img className="img" src={item.SubImgSrc} alt="이미지" />
         </div>
