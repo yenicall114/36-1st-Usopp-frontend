@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Categorie from '../Categorie';
-import { NAVBARDATA_TEXT } from '../NavBarData';
-import NavTopCategorie from '../NavTopCategorie';
+import Categorie from './NavBarCategori/Categorie';
+import { NAVBARDATA_TEXT } from './NavBarData/NavBarData';
+import NavTopCategorie from './NavBar/NavTopCategorie';
 import './Nav.scss';
 
 const Nav = () => {
