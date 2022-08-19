@@ -18,4 +18,3 @@ const NavTopCategorie = ({ name, setNewNav, setMenuState, id, listNow }) => {
   );
 };
 export default NavTopCategorie;
-// {!border ? 'navList' : 'newNavList'}>
