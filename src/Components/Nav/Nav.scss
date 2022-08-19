@@ -84,4 +84,14 @@
       }
     }
   }
+  .perfume {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    &.on {
+      transition: 1s;
+      height: 120%;
+      opacity: 1;
+    }
+  }
 }

@@ -7,7 +7,7 @@ import './Nav.scss';
 const Nav = () => {
   const [newNav, setNewNav] = useState(false);
   const apearPerfumeCategory = () => setNewNav(true);
-  const [menuState, setMenuState] = useState();
+  const [menuState, setMenuState] = useState(0);
 
   return (
     <div className="nav">
@@ -47,10 +47,9 @@ const Nav = () => {
           </ul>
         </nav>
       </div>
-      <div>
-        {newNav === true ? (
-          <PerfumeCategorie data={NAVBARDATA_TEXT[menuState].subMenu} />
-        ) : null}
+
+      <div className={newNav ? 'perfume on' : 'perfume'}>
+        <PerfumeCategorie data={NAVBARDATA_TEXT[menuState].subMenu} />
       </div>
     </div>
   );
