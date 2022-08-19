@@ -1,5 +1,8 @@
+@import '/src/styles/variable.scss';
+
+@include backgroundColors();
 .categorieMain {
-  background-color: rgb(245, 236, 228);
+  border: 1px solid rgba(51, 51, 51, 0.2);
   height: 120%;
   display: flex;
   flex-direction: row;
@@ -42,10 +45,6 @@
         color: black;
         text-decoration: none;
       }
-    }
-
-    .range {
-      margin-top: 50px;
     }
   }
 }

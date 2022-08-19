@@ -1,14 +1,16 @@
-// import React, { useState } from 'react';
 import NavBarCategorie from './NavBarCategorie';
 import NavBarCategorieTwo from './NavBarCategorieTwo';
-import './PerfumeCategorie.scss';
+import NavBarImg from './NavBarImg';
+import './Categorie.scss';
 
-const PerfumeCategorie = ({ data }) => {
+const Categorie = ({ data, color }) => {
   return (
-    <div className="categorieMain">
+    <div className={`categorieMain ${color}`}>
       <div className="leftCategorie">
         <div className="titlle">
-          <h1>Usopp</h1>
+          <a href="/" className="titlleName">
+            Usopp
+          </a>
         </div>
         <div className="categorieLeft">
           <ul>
@@ -21,25 +23,18 @@ const PerfumeCategorie = ({ data }) => {
       <div className="centerCategorie">
         <div className=" categorieAroma">
           <ul>
-            {data.right.map(two => (
+            {data.center.map(two => (
               <NavBarCategorieTwo key={two.id} name={two.name} />
             ))}
-
-            <div className="range">
-              <li>
-                <h2>레인지</h2>
-              </li>
-              <li>
-                <a href="/">아더토피아</a>
-              </li>
-            </div>
           </ul>
         </div>
       </div>
       <div className="rightCategorie">
-        <img alt="향수" src="/image/aesop.jpeg" />
+        {data.right.map(img => (
+          <NavBarImg key={img.id} img={img.img} />
+        ))}
       </div>
     </div>
   );
 };
-export default PerfumeCategorie;
+export default Categorie;

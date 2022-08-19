@@ -1,6 +1,7 @@
 export const NAVBARDATA_TEXT = [
   {
     id: 0,
+    backgroundColor: 'one',
     mainMenu: '스킨 케어',
     subMenu: {
       left: [
@@ -18,17 +19,23 @@ export const NAVBARDATA_TEXT = [
         { id: 12, name: '스킨 케어 세트 추천' },
         { id: 13, name: '스킨 케어 기프트' },
       ],
-      right: [
+      center: [
         { id: 1, name: '피부타입' },
         { id: 2, name: '중성' },
         { id: 3, name: '건성' },
         { id: 4, name: '지성' },
         { id: 5, name: '복합성' },
+        { id: 6, name: <br /> },
+        { id: 7, name: '레인지' },
+        { id: 8, name: '파슬리 씨드' },
+        { id: 9, name: '스킨케어 플러스' },
       ],
+      right: [{ id: 1, img: '/image/skin.jpg' }],
     },
   },
   {
     id: 1,
+    backgroundColor: 'two',
     mainMenu: '바디 & 핸드',
     subMenu: {
       left: [
@@ -40,14 +47,16 @@ export const NAVBARDATA_TEXT = [
         { id: 6, name: '번들' },
         { id: 7, name: '핸드 및 바디 케어 기프트' },
       ],
-      right: [
+      center: [
         { id: 1, name: '레인지' },
         { id: 2, name: '제라늄 리프' },
       ],
+      right: [{ id: 1, img: '/image/body.jpg' }],
     },
   },
   {
     id: 2,
+    backgroundColor: 'three',
     mainMenu: '헤어',
     subMenu: {
       left: [
@@ -58,16 +67,18 @@ export const NAVBARDATA_TEXT = [
         { id: 5, name: '트리트먼트' },
         { id: 6, name: '그루밍' },
       ],
-      right: [
+      center: [
         { id: 1, name: '조화로운 설렉션' },
         { id: 2, name: '샴푸' },
         { id: 3, name: '컨디셔너' },
         { id: 4, name: '테임 헤어 세럼' },
       ],
+      right: [{ id: 1, img: '/image/shampoo.jpg' }],
     },
   },
   {
     id: 3,
+    backgroundColor: 'four',
     mainMenu: '향수',
     subMenu: {
       left: [
@@ -81,17 +92,22 @@ export const NAVBARDATA_TEXT = [
         { id: 8, name: '마라케시' },
         { id: 9, name: '테싯' },
       ],
-      right: [
+      center: [
         { id: 1, name: '향수 아로마' },
         { id: 2, name: '플로럴' },
         { id: 3, name: '프레쉬' },
         { id: 4, name: '우디' },
         { id: 5, name: '오퓰런트' },
+        { id: 6, name: <br /> },
+        { id: 7, name: '레인지' },
+        { id: 8, name: '아더토피아' },
       ],
+      right: [{ id: 1, img: '/image/nav1.jpg' }],
     },
   },
   {
     id: 4,
+    backgroundColor: 'five',
     mainMenu: '홈',
     subMenu: {
       left: [
@@ -101,15 +117,17 @@ export const NAVBARDATA_TEXT = [
         { id: 4, name: '문학' },
         { id: 5, name: '홈 케어 기프트' },
       ],
-      right: [
+      center: [
         { id: 1, name: '사랑받는 제품' },
         { id: 2, name: '프톨레미 아로마틱 캔들' },
         { id: 3, name: '갈리푸스 아로마틱 캔들' },
       ],
+      right: [{ id: 1, img: '/image/home.jpg' }],
     },
   },
   {
     id: 5,
+    backgroundColor: 'six',
     mainMenu: '키트 & 여행 제품',
     subMenu: {
       left: [
@@ -120,16 +138,18 @@ export const NAVBARDATA_TEXT = [
         { id: 5, name: '바디 & 핸드 케어 키트' },
         { id: 6, name: '여행' },
       ],
-      right: [
+      center: [
         { id: 1, name: '여행의 동반자' },
         { id: 2, name: '진저 플라이트' },
         { id: 3, name: '어라이벌' },
         { id: 4, name: '이솝 & 릭 오웬스 트래블 키트' },
       ],
+      right: [{ id: 1, img: '/image/travel.jpg' }],
     },
   },
   {
     id: 6,
+    backgroundColor: 'seven',
     mainMenu: '기프트 가이드',
     subMenu: {
       left: [
@@ -144,12 +164,49 @@ export const NAVBARDATA_TEXT = [
         { id: 9, name: '트래블 기프트' },
         { id: 10, name: '작은 제스처' },
       ],
-      right: [
+      center: [
         { id: 1, name: '감각적인 축하' },
         { id: 2, name: '더 포레저' },
         { id: 3, name: '더 리스너' },
         { id: 4, name: '태싯 오 드 퍼퓸' },
       ],
+      right: [{ id: 1, img: '/image/1.jpg' }],
+    },
+  },
+  {
+    id: 7,
+    backgroundColor: 'eight',
+    mainMenu: '읽기',
+    subMenu: {
+      left: [
+        { id: 1, name: '더 아테네움' },
+        { id: 2, name: '모두보기' },
+        { id: 3, name: <br /> },
+        { id: 4, name: '최신 뉴스' },
+        { id: 5, name: <br /> },
+        { id: 6, name: '각질 관리 가이드' },
+        { id: 7, name: '5분 독서' },
+        { id: 8, name: '피부의 수분 공급을 위한 가이드' },
+        { id: 9, name: '7분 독서' },
+        { id: 10, name: '여성 연대의 소리' },
+        { id: 11, name: '5분 독서' },
+        { id: 12, name: '스킨 케어 루틴을 관리하는 방법' },
+        { id: 13, name: '7분독서' },
+        { id: 14, name: '피부 타입 소개' },
+        { id: 15, name: '7분 독서' },
+      ],
+      center: [
+        { id: 1, name: '회사 소개' },
+        { id: 2, name: '브랜드 스토리' },
+        { id: 3, name: '채용' },
+        { id: 4, name: '이솝재단' },
+        { id: 5, name: '문의 하기' },
+        { id: 6, name: <br /> },
+        { id: 7, name: '철학' },
+        { id: 8, name: '디자인' },
+        { id: 9, name: '제품' },
+      ],
+      right: [{ id: 1, img: '/image/book.jpg' }],
     },
   },
 ];

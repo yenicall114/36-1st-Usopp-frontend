@@ -1,8 +1,8 @@
 import React from 'react';
 import './NavTopCategorie.scss';
-const NavTopCategorie = ({ name, setNewNav, setMenuState, id }) => {
+const NavTopCategorie = ({ name, setNewNav, setMenuState, id, listNow }) => {
   return (
-    <li className="navList">
+    <li className={`navList ${listNow === name ? 'newNavList' : ''}`}>
       <a
         className="clickList"
         onClick={e => {
@@ -18,3 +18,4 @@ const NavTopCategorie = ({ name, setNewNav, setMenuState, id }) => {
   );
 };
 export default NavTopCategorie;
+// {!border ? 'navList' : 'newNavList'}>
