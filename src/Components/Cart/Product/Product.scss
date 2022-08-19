@@ -1,0 +1,68 @@
+.productLocation {
+  display: flex;
+  justify-content: space-between;
+  height: 81px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 254, 242, 0.1);
+
+  p {
+    color: white;
+  }
+
+  .productArea {
+    padding-right: 50px;
+    text-align: center;
+  }
+
+  .btnLocation {
+    display: flex;
+    padding-left: 30px;
+    .quantity {
+      display: flex;
+      color: #ffff;
+      width: 70px;
+      height: 40px;
+      background-color: transparent;
+      border: 1px solid rgba(255, 254, 242, 0.1);
+
+      &:hover {
+        border: 1px solid white;
+        cursor: pointer;
+      }
+
+      .btnCount {
+        padding: 10px 0 0 15px;
+      }
+
+      .fi {
+        padding: 10px 0 0 15px;
+        color: #ffff;
+      }
+    }
+
+    .countList {
+      background-color: #ffff;
+      width: 70px;
+      height: 190px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      cursor: pointer;
+      z-index: 2;
+
+      li {
+        padding: 10px 36px 10px 19px;
+      }
+    }
+
+    .deleteBtn {
+      background-color: transparent;
+      color: white;
+      padding: 9px 0 0 25px;
+      cursor: pointer;
+    }
+  }
+
+  .price {
+    width: 100px;
+  }
+}
