@@ -1,0 +1,95 @@
+.productParfum {
+  background-color: #fffef2;
+
+  .productMain {
+    width: 100%;
+    padding-top: 120px;
+    padding-right: 0;
+    padding-bottom: 120px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    .usopp {
+      text-decoration: none;
+      color: #333;
+      top: 100px;
+      left: 40px;
+      position: absolute;
+      z-index: 1;
+      .titlleName {
+        font-size: 50px;
+      }
+    }
+
+    .productImg {
+      width: 30%;
+      img {
+        display: block;
+        max-width: 100%;
+        height: 427px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 25px;
+      }
+    }
+
+    .productContent {
+      width: 25%;
+      margin-right: 10%;
+      margin-left: 1%;
+      .titlle {
+        margin-bottom: 25px;
+      }
+
+      .parfumInformation {
+        .topHeader {
+          margin-bottom: 15px;
+
+          .topText {
+            font-size: 30px;
+          }
+        }
+        .information {
+          .informationText {
+            font-size: 14px;
+          }
+        }
+        .parfumtextbox {
+          border-top: 2px solid #4a4a4a;
+          margin-top: 24px;
+          margin-bottom: 14px;
+          .parfumtext {
+            padding-top: 14px;
+            border-bottom: 1px solid #d5d4c9;
+            li {
+              margin-bottom: 14px;
+              .plus {
+                background-color: #fffef2;
+                border: none;
+                padding-left: 19.5%;
+                position: absolute;
+                width: 20px;
+              }
+            }
+          }
+          .parfumtextBottom {
+            padding-top: 14px;
+            li {
+              margin-bottom: 14px;
+            }
+          }
+        }
+        .cart {
+          width: 100%;
+          height: 60px;
+          border-color: #333;
+          background-color: #333;
+
+          span {
+            color: #f6f5e8;
+          }
+        }
+      }
+    }
+  }
+}
