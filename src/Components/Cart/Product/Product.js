@@ -1,10 +1,19 @@
 import { useState } from 'react';
 import './Product.scss';
 
-const Product = ({ key, name, size, count, price }) => {
-  const [productCount, setProductCount] = useState(count);
-
-  const sumPrice = price * productCount;
+const Product = ({
+  key,
+  id,
+  idx,
+  name,
+  size,
+  count,
+  price,
+  deletedList,
+  setProductData,
+  productData,
+}) => {
+  const sumPrice = price * count;
 
   const [showBtn, setShowBtn] = useState(false);
   const [showCount, setShowCount] = useState(true);
@@ -18,7 +27,9 @@ const Product = ({ key, name, size, count, price }) => {
   };
 
   const changeCount = e => {
-    setProductCount(Number(e.target.innerText));
+    const newList = productData;
+    newList[idx].count = Number(e.target.innerText);
+    setProductData([...newList]);
     setShowCount(true);
   };
 
@@ -34,10 +45,14 @@ const Product = ({ key, name, size, count, price }) => {
         {showCount ? (
           <>
             <button className="quantity" type="number" onClick={showCountList}>
-              <p className="btnCount">{productCount}</p>
+              <p className="btnCount">{count}</p>
               <i className="fi fi-rr-angle-small-down" />
             </button>
-            {showBtn && <p className="deleteBtn">삭제</p>}
+            {showBtn && (
+              <p className="deleteBtn" id={id} onClick={deletedList}>
+                삭제
+              </p>
+            )}
           </>
         ) : (
           <ul className="countList" onClick={changeCount}>
@@ -49,7 +64,7 @@ const Product = ({ key, name, size, count, price }) => {
           </ul>
         )}
       </div>
-      <p className="price">₩{sumPrice.toLocaleString('ko-KR')}</p>
+      <p className="price">₩ {sumPrice.toLocaleString('ko-KR')}</p>
     </div>
   );
 };
