@@ -5,7 +5,7 @@ import SignIn from './SignMode/SignIn';
 import './Login.scss';
 
 const Login = () => {
-  const [signMode, setSignMode] = useState('signIn');
+  const [signMode, setSignMode] = useState('sign');
   const [inputValue, setInputValue] = useState({
     email: '',
     password: '',
@@ -46,7 +46,7 @@ const Login = () => {
 
   const confirm = e => {
     e.preventDefault();
-    fetch('./data/data.json', {
+    fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/check', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,19 +62,39 @@ const Login = () => {
         throw alert('response is not ok ');
       })
       .then(data => {
-        if (data.sign === '회원가입') {
+        if (data.message === 'EMAIL_NOT_EXISTS') {
           setSignMode('signUp');
-        } else if (data.sign === '로그인') {
+        } else if (data.message === 'EMAIL_DUPLICATE') {
           setSignMode('signIn');
         }
       });
+  };
+
+  const goToSignIn = e => {
+    e.preventDefault();
+    fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: inputValue.email,
+        password: inputValue.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data =>
+        data.message === 'EMAIL_OR_PASSWORD_IS_DIFFERENT'
+          ? alert('잘못된 회원 정보입니다.')
+          : localStorage.setItem('Token', data.Token)
+      );
   };
 
   const goToSignUP = e => {
     e.preventDefault();
     if (inputValue.password === inputValue.passwordConfirm) {
       if (checkBox.first === true && checkBox.second === true) {
-        fetch('./data/data.json', {
+        fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -83,9 +103,15 @@ const Login = () => {
             email: inputValue.email,
             password: inputValue.password,
             firstName: inputValue.firstName,
-            lastName: inputValue.lastName,
+            name: inputValue.lastName,
           }),
-        });
+        })
+          .then(response => response.json())
+          .then(data =>
+            data.message === 'OK'
+              ? setSignMode('sign')
+              : alert('정성껏 입력하세요')
+          );
       } else {
         alert('약관 동의가 필요합니다.');
       }
@@ -110,7 +136,7 @@ const Login = () => {
         sign={SIGN.signIn}
         inputValue={inputValue}
         saveInput={saveInput}
-        confirm={confirm}
+        goToSignIn={goToSignIn}
         signDisabled={signDisabled}
         signBtnColor={signBtnColor}
         signIn={signIn}

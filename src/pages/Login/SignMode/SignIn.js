@@ -4,7 +4,7 @@ const SignIn = ({
   sign,
   inputValue,
   saveInput,
-  confirm,
+  goToSignIn,
   signDisabled,
   signBtnColor,
   signIn,
@@ -14,7 +14,7 @@ const SignIn = ({
       <Input sign={sign} inputValue={inputValue} saveInput={saveInput} />
       <button
         className="btn"
-        onClick={confirm}
+        onClick={goToSignIn}
         disabled={!signDisabled}
         style={{ backgroundColor: signBtnColor }}
       >
