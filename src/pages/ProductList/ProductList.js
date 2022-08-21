@@ -1,17 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './ProductList.scss';
 
-const ProductList = props => {
-  useEffect(() => {
-    fetch('http://localhost:3000/data/ProductList.json')
-      .then(response => {
-        return response.json();
-      })
-      .then(result => {
-        setData(result);
-      });
-  }, []);
-
+const ProductList = () => {
   return (
     <div className="productListWrap">
       <div className="productList">
