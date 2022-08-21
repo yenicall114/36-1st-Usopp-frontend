@@ -6,10 +6,6 @@ const Filter = props => {
   const { filterChange } = props;
   const [close, Setclose] = useState(false);
 
-  const closeFunc = filterBln => {
-    Setclose(filterBln);
-    console.log(close);
-  };
   const myfun = () => {
     if (filterBln === true) {
       filterBln = false;
@@ -21,15 +17,13 @@ const Filter = props => {
     filterChange(filterBln);
   };
   return (
-    <>
-      <button
-        type="button"
-        onClick={myfun}
-        className={filterBln ? 'close' : 'btn'}
-      >
-        {filterBln ? 'X' : '필터'}
-      </button>
-    </>
+    <button
+      type="button"
+      onClick={myfun}
+      className={filterBln ? 'close' : 'btn'}
+    >
+      {filterBln ? 'X' : '필터'}
+    </button>
   );
 };
 

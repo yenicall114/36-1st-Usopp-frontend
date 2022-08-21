@@ -4,21 +4,6 @@ import Product from './Proudct';
 import Filter from './Filter';
 import Option from './Option';
 
-const FilterLIST = [
-  { id: 0, data: '아로마' },
-  { id: 1, data: '모든 향' },
-  { id: 2, data: '우디' },
-  { id: 3, data: '플로럴' },
-  { id: 4, data: '그린' },
-  { id: 5, data: '스파이시' },
-  { id: 6, data: '시트러스' },
-  { id: 7, data: '마린 향' },
-  { id: 8, data: '상쾌한' },
-  { id: 9, data: '스모키' },
-  { id: 10, data: '유향' },
-  { id: 11, data: '허브' },
-];
-
 const Main = () => {
   const [data, setData] = useState([]);
   const [filterBln, setFliterBln] = useState(false);
