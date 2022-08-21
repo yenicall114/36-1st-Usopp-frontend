@@ -1,4 +1,58 @@
-* {
-  margin: 0;
-  padding: 0;
+.allMenuWrap {
+  position: relative;
+  width: 100%;
+  background-color: #ebeade;
+  color: #333;
+  display: flex;
+
+  .first {
+    padding-left: 10px;
+    display: flex;
+    align-items: baseline;
+    padding: 0 28px;
+
+    .chkwrap1 {
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      opacity: 0.3;
+    }
+
+    .MenuWrap {
+      display: flex;
+      color: #333;
+      ul {
+        font-size: 14px;
+        color: #666;
+        li {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .second {
+    padding-left: 10px;
+    display: flex;
+    align-items: baseline;
+    padding: 0 28px;
+    .chkwrap2 {
+      display: flex;
+      flex-direction: column;
+      padding-right: 10px;
+      opacity: 0.3;
+    }
+
+    .Price {
+      display: flex;
+      color: #333;
+      ul {
+        font-size: 14px;
+        color: #666;
+        li {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
 }
