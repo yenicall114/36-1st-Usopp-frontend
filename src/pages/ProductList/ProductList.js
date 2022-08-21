@@ -1,9 +1,7 @@
-import Reac, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './ProductList.scss';
 
 const ProductList = props => {
-  const [data, setData] = useState([]);
-
   useEffect(() => {
     fetch('http://localhost:3000/data/ProductList.json')
       .then(response => {
