@@ -11,7 +11,7 @@ const SubProduct = props => {
           <img className="img" src={item.SubImgSrc} alt="이미지" />
         </div>
         <div className="title">{item.subTitle2}</div>
-        <div className="price">₩{item.price2}</div>
+        <div className="price">{item.price2}</div>
       </a>
     </li>
   );
