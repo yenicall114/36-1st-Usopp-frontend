@@ -4,15 +4,12 @@ let filterBln = false;
 
 const Filter = props => {
   const { filterChange } = props;
-  const [close, Setclose] = useState(false);
 
   const myfun = () => {
     if (filterBln === true) {
       filterBln = false;
-      Setclose(filterBln);
     } else {
       filterBln = true;
-      Setclose(filterBln);
     }
     filterChange(filterBln);
   };
