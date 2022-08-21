@@ -7,37 +7,95 @@
 }
 .main {
   & > .title {
-    padding: 20px 30px;
+    padding: 20px 40px;
+    font-size: 24px;
   }
   .lnb {
     position: relative;
     width: 100%;
+    height: 110px;
     background-color: #ebeade;
 
     .lnbInner {
       float: left;
-      padding: 0 20px;
+      padding: 0 30px;
 
       li {
         float: left;
         padding: 0 10px;
         list-style: none;
+        line-height: 110px;
 
         a {
           display: block;
-          padding: 30px 0;
+          position: relative;
           text-decoration: none;
-          color: rgba(102, 102, 102, 1);
+          font-size: 14px;
+          color: #666;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            margin-bottom: -10px;
+            width: 0;
+            height: 1px;
+            background-color: #666;
+            transition: all 0.3s ease-out;
+          }
+
+          &:hover:after {
+            width: 100%;
+          }
+        }
+        &:first-child {
+          position: relative;
+          padding-right: 30px;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            right: 8px;
+            width: 1px;
+            height: 12px;
+            background-color: #666;
+          }
         }
       }
     }
 
     .btn {
       position: absolute;
-      top: 10px;
+      top: 25px;
       right: 30px;
       padding: 20px 30px;
       border: 1px solid #ccc;
+      background: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:after {
+        content: 'v';
+        padding-left: 20px;
+        color: #666;
+      }
+      &:hover {
+        background-color: #000;
+        color: white;
+      }
+      &:hover:after {
+        color: white;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      padding: 20px 30px;
+      border: none;
       background: none;
       cursor: pointer;
     }
@@ -45,14 +103,16 @@
     .filterMenu {
       overflow: hidden;
       position: absolute;
-      top: 76px;
+      top: 110px;
       height: 0;
       width: 100%;
-      transition: 0.5s;
+      transition: all 0.3s ease-out;
       background-color: #ebeade;
       z-index: 99;
+      opacity: 0;
 
       &.on {
+        opacity: 1;
         height: 447px;
       }
     }
@@ -65,7 +125,7 @@
 
   .content {
     display: flex;
-    padding: 0 5%;
+    padding: 0 40px;
     align-items: flex-end;
     background-color: #f6f5e8;
 
@@ -74,19 +134,28 @@
       padding-bottom: 40px;
 
       .title {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 24px;
+        font-weight: normal;
       }
       .text {
-        padding-top: 10px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.8;
       }
 
       .link {
+        position: relative;
         display: inline-block;
         margin-top: 30px;
         color: #000;
         font-size: 12px;
         text-decoration: none;
+        &::after {
+          content: '→';
+          position: relative;
+          top: -1px;
+          padding-left: 5px;
+        }
       }
     }
 
@@ -98,18 +167,17 @@
       & > li {
         float: left;
         list-style: none;
-        margin-right: 5%;
-
         a {
           display: block;
-          padding: 50px 0;
+          padding: 50px 20px;
           color: #000;
           text-decoration: none;
           transition: 0.5s;
 
           &:hover {
-            background-color: #ebeade;
+            background-color: #f0efe1;
           }
+
           .imgBox {
             display: flex;
             width: 250px;
@@ -125,11 +193,14 @@
           .title {
             margin-top: 10px;
             text-align: center;
+            font-size: 13px;
           }
 
           .price {
-            margin-top: 5px;
+            margin-top: 10px;
             text-align: center;
+            font-size: 13px;
+            color: #666;
           }
         }
       }
@@ -143,6 +214,9 @@
 
     &:nth-child(2n) {
       background-color: #ebeade;
+      .item_list a:hover {
+        background-color: #e5e4d8;
+      }
     }
 
     &:after {
@@ -155,56 +229,57 @@
 
 .giftBunddleWrap {
   padding: 150px 0;
-}
-.giftBunddle {
-  display: flex;
-  flex-direction: row;
-  color: #333;
-}
+  background-color: #fffef2;
 
-.giftTitle {
-  font-weight: 400px;
-  font-size: 30px;
-}
+  .giftBunddle {
+    display: flex;
+    flex-direction: row;
+    color: #333;
 
-.text {
-  color: #333;
-  font-size: 13px;
-  line-height: 1.7;
-}
+    .leftGiftBunddle {
+      padding: 100px 5% 30px;
 
-.leftGiftBunddle {
-  padding: 100px 5% 30px;
+      .giftTitle {
+        font-weight: 400px;
+        font-size: 30px;
+      }
+      .text {
+        margin-top: 40px;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+      .giftBunddleBtn {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+        padding: 20px 22px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+        &::after {
+          content: '→';
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
+        &:hover {
+          background-color: #000;
+          transition: all 0.3s ease-out;
+          color: #fff;
+        }
+      }
+    }
+    .imgWrap {
+      width: 80%;
 
-  .imgWrap {
-    width: 80%;
+      img {
+        width: 100%;
+      }
+    }
   }
-}
-
-.giftTitle {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.33;
-  margin-bottom: 30px;
-}
-.text {
-  color: #333;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.giftBunddleBtn {
-  margin-top: 30px;
-  padding-right: 55px;
-  font-size: 14px;
-  height: 60px;
-  padding: 19px 23px;
-  border-width: 1px;
-  border: 1px solid #ccc;
-  background: none;
-  cursor: pointer;
-}
-
-.img {
-  width: 100%;
 }

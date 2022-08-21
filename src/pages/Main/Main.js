@@ -46,19 +46,7 @@ const Main = () => {
         <nav className="lnb">
           <ul className="lnbInner">
             <li>
-              <a href="http://localhost:3000/main">향수</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">향수 모두 보기</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">미라세티</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">카르스트</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">에레미아</a>
+              <a href="http://localhost:3000/main">모든 향수</a>
             </li>
             <li>
               <a href="http://localhost:3000/main">로즈</a>
@@ -68,6 +56,18 @@ const Main = () => {
             </li>
             <li>
               <a href="http://localhost:3000/main">마라케시</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/main">테싯</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/main">에레미아</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/main">카르스트</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/main">미라세티</a>
             </li>
           </ul>
           <Filter filterChange={filterChange} />
