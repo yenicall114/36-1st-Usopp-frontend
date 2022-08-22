@@ -1,5 +1,18 @@
 .productParfum {
   background-color: #fffef2;
+  aside {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: -50%;
+    z-index: 1;
+    height: 100%;
+    background-color: #fffef2;
+    transition: all 0.35s;
+    &.new {
+      left: 0;
+    }
+  }
 
   .productMain {
     width: 100%;
@@ -16,7 +29,7 @@
       left: 40px;
       position: absolute;
       z-index: 1;
-      .titlleName {
+      .titleName {
         font-size: 50px;
       }
     }
@@ -37,7 +50,7 @@
       width: 25%;
       margin-right: 10%;
       margin-left: 1%;
-      .titlle {
+      .title {
         margin-bottom: 25px;
       }
 

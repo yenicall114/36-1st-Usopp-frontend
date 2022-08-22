@@ -1,11 +1,22 @@
+import { useEffect, useState } from 'react';
+import Parfum from './Parfum';
+import ProductImg from './ProductImg';
 import './ProductParfum.scss';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
 const ProductParfum = () => {
-  // const [Newaside, setNewAside] = useState(false);
-
+  const [data, setData] = useState([]);
+  const [Newaside, setNewAside] = useState(false);
+  useEffect(() => {
+    fetch('http://localhost:3000/data/parfum.json')
+      .then(response => {
+        return response.json();
+      })
+      .then(result => {
+        setData(result);
+      });
+  }, []);
   return (
     <div className="productParfum">
-      {/* <aside>
+      <aside className={Newaside ? 'aside' : 'aside new'}>
         <h4>성분</h4>
         <div>
           <p>
@@ -22,53 +33,28 @@ const ProductParfum = () => {
             지속가능성을 확인한 성분을 사용합니다.
           </p>
         </div>
-      </aside> */}
+      </aside>
+
       <div className="productMain">
         <div className="productContent">
-          <div className="titlle">향수 . 로즈</div>
-          <div className="parfumInformation">
-            <header className="topHeader">
-              <h1 className="topText">로즈 오 드 퍼퓸</h1>
-            </header>
-            <div className="information">
-              <p className="informationText">
-                장미 향이지만 활기찬 시소 향, 우드, 스파이스, 흙내음, 가벼운
-                스모크가 더해진 미묘하고 풍성한 노트로 부드러우면서 강렬한 향수
-              </p>
-            </div>
-            <div className="parfumtextbox">
-              <ul className="parfumtext">
-                <li>향</li>
-                <li>플로럴, 그린, 우디</li>
-              </ul>
-              <ul className="parfumtext">
-                <li>타입</li>
-                <li>모든 성별, 개척자, 모더니스트, 유목민</li>
-              </ul>
-              <ul className="parfumtext">
-                <li>
-                  주요 성분
-                  <button className="plus">
-                    <AiOutlinePlusCircle size="22" />
-                  </button>
-                </li>
-                <li>로즈, 시소, 과이악우드</li>
-              </ul>
-              <ul className="parfumtextBottom">
-                <li>사이즈</li>
-                <li>50 mL</li>
-              </ul>
-            </div>
-            <button className="cart">
-              <span>카트에 추가하기</span>
-            </button>
-          </div>
+          <div className="title">향수 . 로즈</div>
+          {data.map(parfum => {
+            return (
+              <Parfum
+                setNewAside={setNewAside}
+                parfum={parfum}
+                key={parfum.id}
+              />
+            );
+          })}
         </div>
         <div className="productImg">
-          <img src="./image/test.webp" alt="mainimg" />
+          {data.map(img => {
+            return <ProductImg img={img.img} key={img.id} />;
+          })}
         </div>
         <a href="/" className="usopp">
-          <h1 className="titlleName">Usopp</h1>
+          <h1 className="titleName">Usopp</h1>
         </a>
       </div>
     </div>
