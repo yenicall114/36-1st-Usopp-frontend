@@ -1,6 +1,4 @@
-import NavBarCategorie from './NavBarCategorie';
-import NavBarCategorieTwo from './NavBarCategorieTwo';
-import NavBarImg from './NavBarImg';
+import React from 'react';
 import './Categorie.scss';
 
 const Categorie = ({ data, color }) => {
@@ -15,7 +13,11 @@ const Categorie = ({ data, color }) => {
         <div className="categorieLeft">
           <ul>
             {data.left.map(cate => (
-              <NavBarCategorie key={cate.id} name={cate.name} />
+              <li key={cate.id} className="leftList">
+                <a className="leftName" href="/">
+                  {cate.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
@@ -24,14 +26,18 @@ const Categorie = ({ data, color }) => {
         <div className=" categorieAroma">
           <ul>
             {data.center.map(two => (
-              <NavBarCategorieTwo key={two.id} name={two.name} />
+              <li key={two.id} className="leftList">
+                <a className="leftName" href="/">
+                  {two.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
       </div>
       <div className="rightCategorie">
         {data.right.map(img => (
-          <NavBarImg key={img.id} img={img.img} />
+          <img key={img.id} className="parfumImg" alt="향수" src={img.img} />
         ))}
       </div>
     </div>

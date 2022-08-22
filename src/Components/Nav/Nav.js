@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Categorie from './NavBarCategori/Categorie';
 import { NAVBARDATA_TEXT } from './NavBarData/NavBarData';
-import NavTopCategorie from './NavBar/NavTopCategorie';
 import './Nav.scss';
 
 const Nav = () => {
   const [newNav, setNewNav] = useState(false);
-  const apearPerfumeCategory = () => setNewNav(true);
   const [menuState, setMenuState] = useState(0);
   const [listNow, setListNow] = useState();
 
@@ -21,36 +19,58 @@ const Nav = () => {
             }}
           >
             {NAVBARDATA_TEXT.map(top => (
-              <NavTopCategorie
+              <li
                 key={top.id}
-                id={top.id}
-                setMenuState={setMenuState}
-                setNewNav={() => apearPerfumeCategory()}
-                name={top.mainMenu}
-                listNow={listNow}
-              />
+                className={
+                  listNow === top.mainMenu ? 'navList border' : 'navList'
+                }
+              >
+                <a
+                  className="clickList"
+                  onClick={e => {
+                    e.preventDefault();
+                    setNewNav(true);
+                    setMenuState(top.id);
+                  }}
+                  href="/"
+                >
+                  {top.mainMenu}
+                </a>
+              </li>
             ))}
             <li className="navList">
-              <a className="clickList" href="/">
+              <a
+                onClick={e => {
+                  e.preventDefault();
+                }}
+                className="clickList"
+                href="/"
+              >
                 스토어
               </a>
             </li>
             <li className="navList">
               <a className="clickList" href="/">
-                <img src="/image/search.webp" alt="" />
+                <img
+                  className="searchImg"
+                  src="/image/search.webp"
+                  alt="검색이미지"
+                />
               </a>
             </li>
             <li className="navList">
-              {newNav === true ? (
-                <button onClick={() => setNewNav(false)}>닫기 X</button>
-              ) : null}
+              {newNav && (
+                <button className="end" onClick={() => setNewNav(false)}>
+                  닫기 X
+                </button>
+              )}
             </li>
           </ul>
         </nav>
         <nav className="subNav">
-          <ul>
-            <button>로그인</button>
-            <button>카트</button>
+          <ul className="rightUl">
+            <button className="rightButton">로그인</button>
+            <button className="rightButton">카트</button>
           </ul>
         </nav>
       </div>
