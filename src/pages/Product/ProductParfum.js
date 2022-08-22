@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './ProductParfum.scss';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 const ProductParfum = () => {
