@@ -8,14 +8,14 @@
   padding: 50px 40px;
   background-color: #333;
   color: #fffef2;
-  font-size: 14px;
   border-bottom: 3px solid #d6d5cb;
+  font-size: 14px;
 
   h3 {
-    font-size: 15px;
-    line-height: 30px;
     padding: 5px;
     border-bottom: 1px solid #fffef2;
+    font-size: 15px;
+    line-height: 30px;
   }
 
   ul {
@@ -53,7 +53,7 @@
       }
     }
 
-    p {
+    .inputP {
       padding-top: 20px;
     }
 
@@ -87,12 +87,12 @@
 }
 
 .footerBottom {
-  height: 65px;
-  background-color: #333;
-  font-family: 'Lobster', cursive;
   display: flex;
   align-items: center;
-  color: #fffef2;
+  height: 65px;
   padding: 0 40px;
+  color: #fffef2;
+  background-color: #333;
   font-size: 20px;
+  font-family: 'Lobster', cursive;
 }

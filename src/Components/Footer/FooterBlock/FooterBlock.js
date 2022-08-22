@@ -1,5 +1,3 @@
-import './FooterBlock.scss';
-
 const FooterBlock = ({ data }) => {
   const { className, title, list } = data;
 
