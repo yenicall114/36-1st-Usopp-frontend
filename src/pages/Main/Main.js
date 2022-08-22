@@ -43,10 +43,8 @@ const Main = () => {
           <ul className="lnbInner">
             {link.map((item, idx) => {
               return (
-                <li>
-                  <a href={item.link} key={idx}>
-                    {item.title}
-                  </a>
+                <li key={idx}>
+                  <a href={item.link}>{item.title}</a>
                 </li>
               );
             })}
