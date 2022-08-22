@@ -8,7 +8,7 @@ const SubProduct = props => {
     <li>
       <a href="http://localhost:3000/main">
         <div className="imgBox">
-          <img className="img" src={item.SubImgSrc} alt="이미지" />
+          <img className="img" src={item.SubImgSrc} alt="로즈향수이미지" />
         </div>
         <div className="title">{item.subTitle2}</div>
         <div className="price">₩{item.price2}</div>

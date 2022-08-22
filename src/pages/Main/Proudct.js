@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.scss';
+import './Product.scss';
 import SubProduct from './SubProudct';
 
 const Product = props => {
@@ -14,14 +14,12 @@ const Product = props => {
           {item.title} (2)
         </a>
       </div>
-      {item.subData ? (
+      {item.subData && (
         <ul className="item_list">
           {item.subData.map((item, idx) => {
             return <SubProduct item={item} key={idx} />;
           })}
         </ul>
-      ) : (
-        ''
       )}
     </div>
   );
