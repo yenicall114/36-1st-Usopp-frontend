@@ -46,7 +46,7 @@ const Login = () => {
 
   const confirm = e => {
     e.preventDefault();
-    fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/check', {
+    fetch('http://127.0.0.1:3000/users/check', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Login = () => {
 
   const goToSignIn = e => {
     e.preventDefault();
-    fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/signin', {
+    fetch('http://127.0.0.1:3000/users/signin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -84,9 +84,9 @@ const Login = () => {
     })
       .then(response => response.json())
       .then(data =>
-        data.message === 'EMAIL_OR_PASSWORD_IS_DIFFERENT'
-          ? alert('잘못된 회원 정보입니다.')
-          : localStorage.setItem('Token', data.Token)
+        data.accessToken
+          ? localStorage.setItem('Token', data.Token)
+          : alert('잘못된 회원 정보입니다.')
       );
   };
 
@@ -94,7 +94,7 @@ const Login = () => {
     e.preventDefault();
     if (inputValue.password === inputValue.passwordConfirm) {
       if (checkBox.first === true && checkBox.second === true) {
-        fetch('https://ce8d-211-106-114-186.jp.ngrok.io/users/signup', {
+        fetch('http://127.0.0.1:3000/users/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const Login = () => {
             email: inputValue.email,
             password: inputValue.password,
             firstName: inputValue.firstName,
-            name: inputValue.lastName,
+            lsatName: inputValue.lastName,
           }),
         })
           .then(response => response.json())
