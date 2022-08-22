@@ -3,7 +3,7 @@ import './Categorie.scss';
 
 const Categorie = ({ data, color }) => {
   return (
-    <div className={`categorieMain ${color}`}>
+    <div className={`categorie ${color}`}>
       <div className="leftCategorie">
         <div className="titlle">
           <a href="/" className="titlleName">
