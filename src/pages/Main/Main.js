@@ -41,10 +41,12 @@ const Main = () => {
         <h2 className="title">향수</h2>
         <nav className="lnb">
           <ul className="lnbInner">
-            {link.map(item => {
+            {link.map((item, idx) => {
               return (
                 <li>
-                  <a href={item.link}>{item.title}</a>
+                  <a href={item.link} key={idx}>
+                    {item.title}
+                  </a>
                 </li>
               );
             })}
