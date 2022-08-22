@@ -6,6 +6,7 @@ import Option from './Option';
 
 const Main = () => {
   const [data, setData] = useState([]);
+  const [link, setLink] = useState([]);
   const [filterBln, setFliterBln] = useState(false);
 
   useEffect(() => {
@@ -15,6 +16,16 @@ const Main = () => {
       })
       .then(result => {
         setData(result);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/link.json')
+      .then(response => {
+        return response.json();
+      })
+      .then(result => {
+        setLink(result);
       });
   }, []);
 
@@ -30,30 +41,13 @@ const Main = () => {
         <h2 className="title">향수</h2>
         <nav className="lnb">
           <ul className="lnbInner">
-            <li>
-              <a href="http://localhost:3000/main">모든 향수</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">로즈</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">휠</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">마라케시</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">테싯</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">에레미아</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">카르스트</a>
-            </li>
-            <li>
-              <a href="http://localhost:3000/main">미라세티</a>
-            </li>
+            {link.map((item, idx) => {
+              return (
+                <li>
+                  <a href={item.link}>{item.title}</a>
+                </li>
+              );
+            })}
           </ul>
           <Filter filterChange={filterChange} />
           <div className={filterBln ? 'filterMenu on' : 'filterMenu'}>
