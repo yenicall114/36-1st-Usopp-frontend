@@ -41,7 +41,7 @@ const Main = () => {
         <h2 className="title">향수</h2>
         <nav className="lnb">
           <ul className="lnbInner">
-            {link.map((item, idx) => {
+            {link.map(item => {
               return (
                 <li>
                   <a href={item.link}>{item.title}</a>
