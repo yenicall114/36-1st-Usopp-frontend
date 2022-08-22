@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Sign from './SignMode/Sign';
 import SignUp from './SignMode/SignUp';
 import SignIn from './SignMode/SignIn';
 import './Login.scss';
@@ -92,6 +91,7 @@ const Login = () => {
 
   const goToSignUP = e => {
     e.preventDefault();
+
     if (inputValue.password === inputValue.passwordConfirm) {
       if (checkBox.first === true && checkBox.second === true) {
         fetch('http://127.0.0.1:3000/users/signup', {
@@ -122,11 +122,11 @@ const Login = () => {
 
   const showSign = {
     sign: (
-      <Sign
+      <SignIn
         sign={SIGN.sign}
         inputValue={inputValue}
         saveInput={saveInput}
-        confirm={confirm}
+        goToSignIn={confirm}
         signDisabled={signDisabled}
         signBtnColor={signBtnColor}
       />

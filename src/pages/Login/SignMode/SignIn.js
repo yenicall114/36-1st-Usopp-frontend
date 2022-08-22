@@ -20,9 +20,12 @@ const SignIn = ({
       >
         <span> 계속</span>
       </button>
-      <p className="under" onClick={signIn}>
-        회원이 아니십니까?
-      </p>
+
+      {signIn && (
+        <p className="under" onClick={signIn}>
+          회원이 아니십니까?
+        </p>
+      )}
     </>
   );
 };
