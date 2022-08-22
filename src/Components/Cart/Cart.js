@@ -28,12 +28,8 @@ const Cart = () => {
     return (
       <Product
         key={idx}
-        id={product.id}
         idx={idx}
-        name={product.name}
-        size={product.size}
-        count={product.count}
-        price={product.price}
+        product={product}
         deletedList={deletedList}
         productData={productData}
         setProductData={setProductData}
@@ -51,8 +47,7 @@ const Cart = () => {
     <div className="cart">
       {productList.length === 0 ? (
         <div className="empty">
-          <div />
-          <p>카트가 비어있습니다.</p>
+          <p className="emptyP">카트가 비어있습니다.</p>
         </div>
       ) : (
         <>

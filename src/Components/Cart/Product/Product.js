@@ -3,16 +3,14 @@ import './Product.scss';
 
 const Product = ({
   key,
-  id,
   idx,
-  name,
-  size,
-  count,
-  price,
+  product,
   deletedList,
   setProductData,
   productData,
 }) => {
+  const { id, name, size, count, price } = product;
+
   const sumPrice = price * count;
 
   const [showBtn, setShowBtn] = useState(false);
@@ -55,7 +53,11 @@ const Product = ({
             )}
           </>
         ) : (
-          <ul className="countList" onClick={changeCount}>
+          <ul
+            className="countList"
+            onClick={changeCount}
+            onMouseLeave={showCountList}
+          >
             <li>1</li>
             <li>2</li>
             <li>3</li>
