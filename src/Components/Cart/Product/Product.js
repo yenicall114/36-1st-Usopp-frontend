@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Product.scss';
 
 const Product = ({
-  key,
   idx,
   product,
   deletedList,
@@ -32,7 +31,7 @@ const Product = ({
   };
 
   return (
-    <div className="productLocation" key={key}>
+    <div className="productLocation">
       <p className="titleArea">{name}</p>
       <p className="sizeArea productArea">{size}</p>
       <div
