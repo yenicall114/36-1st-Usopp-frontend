@@ -4,27 +4,27 @@ import './Cart.scss';
 
 const Cart = () => {
   const [productData, setProductData] = useState([]);
-
+  // console.log(productData);
   let totalSumPrice = 0;
 
   const deletedList = e =>
-    setProductData(
-      productData.filter(product => product.id !== Number(e.target.id))
+    setProductData(productData =>
+      productData.filter(({ product_id }) => product_id !== Number(e.target.id))
     );
 
   const goToPay = () =>
-    fetch('api주소', {
+    fetch(' https://518f-211-106-114-186.jp.ngrok.io/cart/2 ', {
       method: 'POST',
       headers: {
-        'content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        productData: productData,
+        userId: 2,
       }),
-    });
+    }).then(response => console.log(response.json()));
 
   const productList = productData.map((product, idx) => {
-    totalSumPrice += product.price * product.count;
+    totalSumPrice += product.price * product.quantity;
     return (
       <Product
         key={idx}
@@ -38,7 +38,15 @@ const Cart = () => {
   });
 
   useEffect(() => {
-    fetch('data/data.json')
+    fetch(' https://518f-211-106-114-186.jp.ngrok.io/cart/2 ', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userId: 2,
+      }),
+    })
       .then(response => response.json())
       .then(setProductData);
   }, []);

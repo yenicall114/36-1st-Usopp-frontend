@@ -8,9 +8,9 @@ const Product = ({
   setProductData,
   productData,
 }) => {
-  const { id, name, size, count, price } = product;
+  const { product_id, name, size, quantity, price } = product;
 
-  const sumPrice = price * count;
+  const sumPrice = price * quantity;
 
   const [showBtn, setShowBtn] = useState(false);
   const [showCount, setShowCount] = useState(true);
@@ -25,14 +25,14 @@ const Product = ({
 
   const changeCount = e => {
     const newList = productData;
-    newList[idx].count = Number(e.target.innerText);
+    newList[idx].quantity = Number(e.target.innerText);
     setProductData([...newList]);
     setShowCount(true);
   };
 
   return (
     <div className="productLocation">
-      <p className="titleArea">{name}</p>
+      <p className="titleArea">{product_id}</p>
       <p className="sizeArea productArea">{size}</p>
       <div
         className="countArea btnLocation"
@@ -42,11 +42,11 @@ const Product = ({
         {showCount ? (
           <>
             <button className="quantity" type="number" onClick={showCountList}>
-              <p className="btnCount">{count}</p>
+              <p className="btnCount">{name}</p>
               <i className="fi fi-rr-angle-small-down" />
             </button>
             {showBtn && (
-              <p className="deleteBtn" id={id} onClick={deletedList}>
+              <p className="deleteBtn" id={product_id} onClick={deletedList}>
                 삭제
               </p>
             )}
