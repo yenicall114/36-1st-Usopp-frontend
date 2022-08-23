@@ -167,11 +167,7 @@ const Login = () => {
               로그인 및 회원가입을 위한 이메일 주소를 입력 부탁드립니다.
             </div>
           </div>
-          {signMode === 'sign'
-            ? showSign.sign
-            : signMode === 'signIn'
-            ? showSign.signIn
-            : showSign.signUp}
+          {showSign[signMode]}
         </form>
         <i className="fi fi-br-cross" />
       </div>
