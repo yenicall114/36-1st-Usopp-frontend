@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react';
 import Parfum from './Parfum';
-import ProductImg from './ProductImg';
 import './ProductParfum.scss';
 const ProductParfum = () => {
   const [data, setData] = useState([]);
-  const [Newaside, setNewAside] = useState(false);
+  const [newAside, setNewAside] = useState(false);
   useEffect(() => {
-    fetch('http://localhost:3000/data/parfum.json')
-      .then(response => {
-        return response.json();
-      })
-      .then(result => {
-        setData(result);
-      });
+    fetch('/data/parfum.json')
+      .then(response => response.json())
+      .then(result => setData(result));
   }, []);
+
   return (
     <div className="productParfum">
-      <aside className={Newaside ? 'aside' : 'aside new'}>
-        <h4>성분</h4>
-        <div>
+      <div
+        className={newAside ? 'outAside out' : 'outAside'}
+        onClick={() => setNewAside(prev => !prev)}
+      />
+      <aside className={newAside ? 'aside new' : 'aside'}>
+        <div className="in">
+          <h4 className="outTitle">성분</h4>
           <p>
             변성알코올, 정제수, 향료, 리모넨, 리날룰, 시트로넬올, 제라니올,
             유제놀, 아이소유제놀, 파네솔, 벤질알코올, 신남알, 시트랄,
@@ -38,20 +38,12 @@ const ProductParfum = () => {
       <div className="productMain">
         <div className="productContent">
           <div className="title">향수 . 로즈</div>
-          {data.map(parfum => {
-            return (
-              <Parfum
-                setNewAside={setNewAside}
-                parfum={parfum}
-                key={parfum.id}
-              />
-            );
-          })}
+          {data[0] && <Parfum setNewAside={setNewAside} parfum={data[0]} />}
         </div>
         <div className="productImg">
-          {data.map(img => {
-            return <ProductImg img={img.img} key={img.id} />;
-          })}
+          {data[0] && (
+            <img src={data[0].img} className="mainImg" alt="mainimg" />
+          )}
         </div>
         <a href="/" className="usopp">
           <h1 className="titleName">Usopp</h1>

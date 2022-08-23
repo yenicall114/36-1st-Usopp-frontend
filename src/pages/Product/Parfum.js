@@ -1,4 +1,5 @@
 import React from 'react';
+import './Parfum.scss';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
 const Parfum = ({ parfum, setNewAside }) => {
@@ -23,7 +24,13 @@ const Parfum = ({ parfum, setNewAside }) => {
           <li>
             {parfum.ingredient}
             <button className="plus">
-              <AiOutlinePlusCircle size="22" />
+              <AiOutlinePlusCircle
+                className="icon"
+                onClick={e => {
+                  setNewAside(prev => !prev);
+                }}
+                size="22"
+              />
             </button>
           </li>
           <li>{parfum.ingredientText}</li>
@@ -33,8 +40,8 @@ const Parfum = ({ parfum, setNewAside }) => {
           <li>{parfum.sizeType}</li>
         </ul>
       </div>
-      <button onClick={setNewAside(true)} className="cart">
-        <span>{parfum.price}</span>
+      <button className="cart">
+        <span className="buttonText">카트에 추가하기-₩{parfum.price}</span>
       </button>
     </div>
   );

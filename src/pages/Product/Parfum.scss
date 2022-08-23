@@ -1,0 +1,57 @@
+.parfumInformation {
+  .topHeader {
+    margin-bottom: 15px;
+
+    .topText {
+      font-size: 30px;
+    }
+  }
+  .information {
+    .informationText {
+      font-size: 14px;
+    }
+  }
+  .parfumtextbox {
+    border-top: 2px solid #4a4a4a;
+    margin-top: 24px;
+    margin-bottom: 14px;
+    .parfumtext {
+      padding-top: 14px;
+      border-bottom: 1px solid #d5d4c9;
+      li {
+        margin-bottom: 14px;
+        .plus {
+          background-color: #fffef2;
+          border: none;
+          padding-left: 19.5%;
+          position: absolute;
+          width: 20px;
+          .icon {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .parfumtextBottom {
+      padding-top: 14px;
+      li {
+        margin-bottom: 14px;
+      }
+    }
+  }
+  .cart {
+    width: 100%;
+    height: 60px;
+    border-color: #999;
+    background-color: #999;
+    cursor: pointer;
+    &:hover {
+      border-color: black;
+      background-color: black;
+    }
+
+    .buttonText {
+      color: #f6f5e8;
+    }
+  }
+}
