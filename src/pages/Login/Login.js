@@ -155,7 +155,6 @@ const Login = () => {
         signIn={signIn}
       />
     ),
-    ss: <h1>ss</h1>,
   };
 
   return (
