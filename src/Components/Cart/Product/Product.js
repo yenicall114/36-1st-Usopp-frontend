@@ -21,7 +21,7 @@ const Product = ({
   const hideDelte = () => setShowBtn(false);
 
   const showCountList = e => {
-    setShowCount(!showCount);
+    setShowCount(showCount => !showCount);
   };
 
   const changeCount = e => {
