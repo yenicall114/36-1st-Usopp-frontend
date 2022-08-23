@@ -13,15 +13,15 @@ const Parfum = ({ parfum, setNewAside }) => {
       </div>
       <div className="parfumtextbox">
         <ul className="parfumtext">
-          <li>{parfum.scent}</li>
-          <li>{parfum.scentText}</li>
+          <li className="parfumLi">{parfum.scent}</li>
+          <li className="parfumLi">{parfum.scentText}</li>
         </ul>
         <ul className="parfumtext">
-          <li>{parfum.type}</li>
-          <li>{parfum.typeText}</li>
+          <li className="parfumLi">{parfum.type}</li>
+          <li className="parfumLi">{parfum.typeText}</li>
         </ul>
         <ul className="parfumtext">
-          <li>
+          <li className="parfumLi">
             {parfum.ingredient}
             <button className="plus">
               <AiOutlinePlusCircle
@@ -33,11 +33,11 @@ const Parfum = ({ parfum, setNewAside }) => {
               />
             </button>
           </li>
-          <li>{parfum.ingredientText}</li>
+          <li className="parfumLi">{parfum.ingredientText}</li>
         </ul>
         <ul className="parfumtextBottom">
-          <li>{parfum.size}</li>
-          <li>{parfum.sizeType}</li>
+          <li className="parfumLi">{parfum.size}</li>
+          <li className="parfumLi">{parfum.sizeType}</li>
         </ul>
       </div>
       <button className="cart">
