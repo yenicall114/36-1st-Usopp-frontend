@@ -1,0 +1,98 @@
+.footer {
+  display: grid;
+  grid-template-areas:
+    'email email order service location'
+    'vision vision introduce social caution';
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding: 50px 40px;
+  background-color: #333;
+  color: #fffef2;
+  border-bottom: 3px solid #d6d5cb;
+  font-size: 14px;
+
+  h3 {
+    padding: 5px;
+    border-bottom: 1px solid #fffef2;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  ul {
+    margin-top: 15px;
+
+    li {
+      padding-top: 10px;
+    }
+  }
+
+  .email {
+    grid-area: email;
+
+    .inputBox {
+      position: relative;
+
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 5px;
+        border: 1px solid #fffef2;
+        border-radius: 3px;
+        background-color: transparent;
+        color: #fffef2;
+
+        &::placeholder {
+          color: #fffef2;
+        }
+      }
+
+      .fi {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+
+    .inputP {
+      padding-top: 20px;
+    }
+
+    .checkBox {
+      display: flex;
+      padding-top: 20px;
+    }
+  }
+
+  .order {
+    grid-area: order;
+  }
+  .service {
+    grid-area: service;
+  }
+  .location {
+    grid-area: location;
+  }
+  .vision {
+    grid-area: vision;
+  }
+  .introduce {
+    grid-area: introduce;
+  }
+  .social {
+    grid-area: social;
+  }
+  .caution {
+    grid-area: caution;
+  }
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 0 40px;
+  color: #fffef2;
+  background-color: #333;
+  font-size: 20px;
+  font-family: 'Lobster', cursive;
+}
