@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Components/Nav/Nav';
+import Footer from './Components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import './styles/reset.scss';
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/" element={<Login />} />
         <Route path="/main" element={<Main />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

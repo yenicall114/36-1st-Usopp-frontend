@@ -1,0 +1,97 @@
+.categorie {
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  height: 120%;
+  display: flex;
+  flex-direction: row;
+
+  .leftCategorie {
+    display: flex;
+    width: 33.3%;
+
+    .titlle {
+      font-size: 40px;
+      padding-top: 70px;
+      padding-left: 40px;
+      .titlleName {
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+    .categorieLeft {
+      padding-top: 70px;
+      padding-left: 140px;
+
+      .leftList {
+        margin-top: 20px;
+
+        .leftName {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.centerCategorie {
+  width: 33.3%;
+  display: flex;
+  height: 100vh;
+
+  .categorieAroma {
+    padding-top: 70px;
+    padding-left: 40px;
+    height: 100%;
+    width: 100%;
+
+    .leftList {
+      margin-top: 20px;
+      .leftName {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.rightCategorie {
+  width: 33.3%;
+  display: flex;
+
+  .parfumImg {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.one {
+  background-color: #f0efe0;
+}
+
+.two {
+  background-color: #ece3d3;
+}
+
+.three {
+  background-color: #ded8d4;
+}
+
+.four {
+  background-color: #f5ece4;
+}
+
+.five {
+  background-color: #f7f1ec;
+}
+
+.six {
+  background-color: #e9f0e3;
+}
+
+.seven {
+  background-color: #ebeadf;
+}
+.eight {
+  background-color: #fefef2;
+}
