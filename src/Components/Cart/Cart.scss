@@ -1,0 +1,88 @@
+.cart {
+  padding: 60px;
+  background-color: #252525;
+
+  .empty {
+    height: 45px;
+    color: #fffef2;
+
+    .emptyP {
+      float: right;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  }
+
+  .naviLocation {
+    display: flex;
+    justify-content: space-between;
+    color: #fffef2;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255, 254, 242, 0.1);
+
+    div {
+      padding: 0 0 20px;
+      font-size: 14px;
+    }
+    .fi {
+      font-size: 14px;
+    }
+  }
+
+  .titleArea {
+    width: 23%;
+  }
+
+  .sizeArea {
+    width: 12%;
+  }
+  .countArea {
+    width: 15%;
+  }
+
+  .cartUnder {
+    padding: 30px 40px 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    .underArea {
+      width: 40%;
+    }
+
+    .notice {
+      display: flex;
+      span {
+        color: #fffef2;
+        padding-right: 10%;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+
+      p {
+        color: white;
+      }
+
+      span {
+        color: white;
+        font-size: 30px;
+      }
+    }
+
+    .payment {
+      display: flex;
+
+      button {
+        width: 100%;
+        height: 60px;
+        min-width: 210px;
+        background-color: #eaeadf;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
