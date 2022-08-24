@@ -4,7 +4,6 @@ import './Cart.scss';
 
 const Cart = () => {
   const [productData, setProductData] = useState([]);
-  // console.log(productData);
   let totalSumPrice = 0;
 
   const deletedList = e =>
@@ -42,10 +41,8 @@ const Cart = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: '',
       },
-      body: JSON.stringify({
-        userId: 2,
-      }),
     })
       .then(response => response.json())
       .then(setProductData);
