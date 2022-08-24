@@ -2,7 +2,7 @@ import React from 'react';
 import './Parfum.scss';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
-const Parfum = ({ parfum, setNewAside }) => {
+const Parfum = ({ parfum, setNewAside, cartPost }) => {
   return (
     <div className="parfumInformation">
       <header className="topHeader">
@@ -40,8 +40,8 @@ const Parfum = ({ parfum, setNewAside }) => {
           <li className="parfumLi">{parfum.sizeType}</li>
         </ul>
       </div>
-      <button className="cart">
-        <span className="buttonText">카트에 추가하기-₩{parfum.price}</span>
+      <button id={parfum.productId} onClick={cartPost} className="cart">
+        <span className="buttonText">카트에 추가하기-₩{parfum.productId}</span>
       </button>
     </div>
   );

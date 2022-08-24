@@ -10,6 +10,21 @@ const ProductParfum = () => {
       .then(result => setData(result));
   }, []);
 
+  const cartPost = e => {
+    console.log(e.target.id);
+    //todolist:API통신용
+    // fetch('api', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-type': 'application/json',
+    //     Authorization: JSON.parse(localStorge.getUtem('data')).accessToken,
+    //   },
+    //   body: JSON.stringify({
+    //     pordurtId: e.target.id,
+    //   }),
+    // });
+  };
+
   return (
     <div className="productParfum">
       <div
@@ -18,7 +33,7 @@ const ProductParfum = () => {
       />
       <aside className={newAside ? 'aside new' : 'aside'}>
         <div className="in">
-          <h4 className="outTitle">성분</h4>
+          <h2 className="outTitle">성분</h2>
           {data[0] && <p className="outText">{data[0].aside}</p>}
           {data[0] && <p className="outText">{data[0].asideCenter}</p>}
           {data[0] && <p className="outText">{data[0].asideButtom}</p>}
@@ -28,7 +43,13 @@ const ProductParfum = () => {
       <div className="productMain">
         <div className="productContent">
           <div className="title">향수 . 로즈</div>
-          {data[0] && <Parfum setNewAside={setNewAside} parfum={data[0]} />}
+          {data[0] && (
+            <Parfum
+              cartPost={cartPost}
+              setNewAside={setNewAside}
+              parfum={data[0]}
+            />
+          )}
         </div>
         <div className="productImg">
           {data[0] && (
