@@ -1,0 +1,108 @@
+.productListWrap {
+  background-color: #f0efe1;
+  width: 100%;
+  .productList {
+    display: flex;
+    justify-content: space-evenly;
+    .info {
+      font-size: 14px;
+      width: 50%;
+      margin-top: 80px;
+      padding: 0 30px;
+      color: #252525;
+      line-height: 1.4;
+    }
+    .itemList {
+      display: flex;
+      align-items: baseline;
+      color: #252525;
+      line-height: 1.4;
+
+      .productItem {
+        text-align: center;
+        padding: 30px;
+        width: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          background-color: #e5e4d8;
+        }
+        img {
+          width: 100%;
+          max-width: 300px;
+        }
+        .title {
+          padding: 5px 0;
+        }
+        .price {
+          padding: 5px 0;
+        }
+        .detail01 {
+          border-top: 2px solid #000;
+          margin-top: 30px;
+        }
+        .detail01,
+        .detail02 {
+          border-bottom: 1px solid #ccc;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+  .giftBunddleWrap {
+    padding: 150px 0;
+    background-color: #fffef2;
+
+    .giftBunddle {
+      display: flex;
+      flex-direction: row;
+      color: #333;
+
+      .leftGiftBunddle {
+        padding: 100px 5% 30px;
+
+        .giftTitle {
+          font-weight: 400px;
+          font-size: 30px;
+        }
+        .text {
+          margin-top: 40px;
+          color: #333;
+          font-size: 16px;
+          line-height: 1.8;
+        }
+        .giftBunddleBtn {
+          position: relative;
+          margin-top: 30px;
+          width: 100%;
+          max-width: 300px;
+          height: 60px;
+          padding: 20px 22px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          background: none;
+          text-align: left;
+          cursor: pointer;
+          &::after {
+            content: '→';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+          }
+          &:hover {
+            background-color: #000;
+            transition: all 0.3s ease-out;
+            color: #fff;
+          }
+        }
+      }
+      .imgWrap {
+        width: 80%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
