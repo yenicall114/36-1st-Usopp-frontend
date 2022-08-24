@@ -11,7 +11,7 @@ const ProductParfum = () => {
   }, []);
 
   const cartPost = e => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
     //todolist:API통신용
     // fetch('api', {
     //   method: 'POST',
