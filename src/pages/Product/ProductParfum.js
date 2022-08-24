@@ -5,7 +5,7 @@ const ProductParfum = () => {
   const [data, setData] = useState([]);
   const [newAside, setNewAside] = useState(false);
   useEffect(() => {
-    fetch('/data/parfum.json')
+    fetch('http://localhost:3000/data/parfum.json')
       .then(response => response.json())
       .then(result => setData(result));
   }, []);
@@ -19,9 +19,9 @@ const ProductParfum = () => {
       <aside className={newAside ? 'aside new' : 'aside'}>
         <div className="in">
           <h4 className="outTitle">성분</h4>
-          <p className="outText">{data[0].aside}</p>
-          <p className="outText">{data[0].asideCenter}</p>
-          <p className="outText">{data[0].asideButtom}</p>
+          {data[0] && <p className="outText">{data[0].aside}</p>}
+          {data[0] && <p className="outText">{data[0].asideCenter}</p>}
+          {data[0] && <p className="outText">{data[0].asideButtom}</p>}
         </div>
       </aside>
 
