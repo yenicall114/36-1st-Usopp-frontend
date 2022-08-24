@@ -1,35 +1,37 @@
 import { useEffect, useState } from 'react';
-import Parfum from './Parfum';
-import './ProductParfum.scss';
-const ProductParfum = () => {
+import Perfume from './Perfume';
+import './ProductPerfume.scss';
+
+const ProductPerfume = () => {
   const [data, setData] = useState([]);
   const [newAside, setNewAside] = useState(false);
+
   useEffect(() => {
-    fetch('http://localhost:3000/data/parfum.json')
+    fetch('http://localhost:3000/data/Perfume.json')
       .then(response => response.json())
       .then(result => setData(result));
   }, []);
 
   const cartPost = e => {
-    // console.log(e.target.id);
-    //todolist:API통신용
-    // fetch('api', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-type': 'application/json',
-    //     Authorization: JSON.parse(localStorge.getUtem('data')).accessToken,
-    //   },
-    //   body: JSON.stringify({
-    //     pordurtId: e.target.id,
-    //   }),
-    // });
+    // API통신용;
+    fetch('http://10.58.0.218:8000/carts', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+        // Authorization: JSON.parse(localStorge.getUtem('data')).accessToken,
+      },
+      body: JSON.stringify({
+        userId: 1,
+        productId: e.target.id,
+      }),
+    });
   };
 
   return (
-    <div className="productParfum">
+    <div className="productPerfume">
       <div
         className={newAside ? 'outAside out' : 'outAside'}
-        onClick={() => setNewAside(prev => !prev)}
+        onClick={() => setNewAside(aside => !aside)}
       />
       <aside className={newAside ? 'aside new' : 'aside'}>
         <div className="in">
@@ -44,10 +46,10 @@ const ProductParfum = () => {
         <div className="productContent">
           <div className="title">향수 . 로즈</div>
           {data[0] && (
-            <Parfum
+            <Perfume
               cartPost={cartPost}
               setNewAside={setNewAside}
-              parfum={data[0]}
+              Perfume={data[0]}
             />
           )}
         </div>
@@ -63,4 +65,4 @@ const ProductParfum = () => {
     </div>
   );
 };
-export default ProductParfum;
+export default ProductPerfume;
