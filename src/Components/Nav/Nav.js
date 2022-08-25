@@ -17,7 +17,7 @@ const Nav = () => {
   const toggleCart = () => setShowCart(showCart => !showCart);
 
   const Token = localStorage.getItem('data');
-  
+
   return (
     <>
       {showLogin && <Login toglleCart={toglleCart} />}
