@@ -1,22 +1,28 @@
 import React from 'react';
+
 import './Product.scss';
 import SubProduct from './SubProudct';
 
-const Product = props => {
-  const { item } = props;
-
+const Product = ({ item }) => {
+  const { cname, category_description, product, setProduct } = item;
+  // console.log(product);
   return (
     <div className="content">
       <div className="info">
-        <div className="title">{item.title}</div>
-        <div className="text">{item.text}</div>
-        <a href="http://localhost:3000/main" className="link">
-          {item.title} (2)
-        </a>
+        <div className="title">{cname}</div>
+        <div className="text">{category_description}</div>
+        <p className="link">{cname} (2)</p>
       </div>
-      {item.subData && (
+      {product && (
         <ul className="item_list">
-          {item.subData.map((item, idx) => {
+          {product.map((item, idx) => {
+            return <SubProduct item={item} key={idx} />;
+          })}
+        </ul>
+      )}
+      {setProduct && (
+        <ul className="item_list">
+          {setProduct.map((item, idx) => {
             return <SubProduct item={item} key={idx} />;
           })}
         </ul>
