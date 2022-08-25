@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { API } from './RESTFULLAPI.js';
 import './Main.scss';
 import Product from './Proudct';
 import Filter from './Filter';
@@ -11,7 +12,7 @@ const Main = () => {
   const [filterBln, setFliterBln] = useState(false);
 
   useEffect(() => {
-    fetch('http://10.58.0.58:3000/main')
+    fetch(`http://${API}:3000/main`)
       .then(response => response.json())
       .then(result => {
         setData(result);
@@ -51,11 +52,10 @@ const Main = () => {
             <Option />
           </div>
         </nav>
-        {data.map((item, idx) => {
-          if (item.category_description) {
-            return <Product item={item} key={idx} />;
-          }
-        })}
+        {data.map(
+          (item, idx) =>
+            item.category_description && <Product item={item} key={idx} />
+        )}
       </div>
 
       <div className="giftBunddleWrap">

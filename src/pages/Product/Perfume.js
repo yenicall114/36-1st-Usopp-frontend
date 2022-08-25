@@ -3,40 +3,29 @@ import './Perfume.scss';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
 const Perfume = ({ Perfume, setNewAside, cartPost }) => {
-  const {
-    title,
-    text,
-    scent,
-    scentText,
-    type,
-    typeText,
-    ingredient,
-    ingredientText,
-    size,
-    sizeType,
-    productId,
-  } = Perfume;
+  const { name, price, type, description, aromas, ingredient, size, id } =
+    Perfume;
 
   return (
     <div className="PerfumeInformation">
       <header className="topHeader">
-        <h1 className="topText">{title}</h1>
+        <h1 className="topText">{name}</h1>
       </header>
       <div className="information">
-        <p className="informationText">{text}</p>
+        <p className="informationText">{description}</p>
       </div>
       <div className="Perfumetextbox">
         <ul className="Perfumetext">
-          <li className="PerfumeLi">{scent}</li>
-          <li className="PerfumeLi">{scentText}</li>
+          <li className="PerfumeLi">향</li>
+          <li className="PerfumeLi">{aromas[0]}</li>
         </ul>
         <ul className="Perfumetext">
+          <li className="PerfumeLi">타입</li>
           <li className="PerfumeLi">{type}</li>
-          <li className="PerfumeLi">{typeText}</li>
         </ul>
         <ul className="Perfumetext">
           <li className="PerfumeLi">
-            {ingredient}
+            주요성분
             <button className="plus">
               <AiOutlinePlusCircle
                 className="icon"
@@ -47,15 +36,15 @@ const Perfume = ({ Perfume, setNewAside, cartPost }) => {
               />
             </button>
           </li>
-          <li className="PerfumeLi">{ingredientText}</li>
+          <li className="PerfumeLi">{ingredient}</li>
         </ul>
         <ul className="PerfumetextBottom">
-          <li className="PerfumeLi">{size}</li>
-          <li className="PerfumeLi">{sizeType}</li>
+          <li className="PerfumeLi">사이즈</li>
+          <li className="PerfumeLi">{size} ml</li>
         </ul>
       </div>
-      <button id={productId} onClick={cartPost} className="cart">
-        <span className="buttonText">카트에 추가하기-₩{productId}</span>
+      <button id={id} onClick={cartPost} className="productCart">
+        <span className="buttonText">카트에 추가하기-₩{price}</span>
       </button>
     </div>
   );

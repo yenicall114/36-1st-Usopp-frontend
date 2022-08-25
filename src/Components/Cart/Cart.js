@@ -8,6 +8,7 @@ const Cart = ({ toggleCart }) => {
   let totalSumPrice = 0;
 
   const deletedList = e => {
+    const cartId = e.target.id;
     setProductData(productData =>
       productData.filter(({ product_id }) => product_id !== Number(e.target.id))
     );
@@ -17,7 +18,9 @@ const Cart = ({ toggleCart }) => {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token'),
       },
-      body: Number(e.target.id),
+      body: JSON.stringify({
+        cartId: cartId,
+      }),
     });
   };
 

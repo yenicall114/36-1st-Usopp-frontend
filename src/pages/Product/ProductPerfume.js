@@ -21,10 +21,9 @@ const ProductPerfume = () => {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
-        // Authorization: JSON.parse(localStorge.getUtem('data')).accessToken,
+        Authorization: localStorage.getItem('token'),
       },
       body: JSON.stringify({
-        userId: 1,
         productId: e.target.id,
       }),
     });
@@ -62,7 +61,7 @@ const ProductPerfume = () => {
         </div>
         <div className="productImg">
           {data[0] && (
-            <img src={data[0].image} className="mainImg" alt="mainimg" />
+            <img src={data[0].url} className="mainImg" alt="mainimg" />
           )}
         </div>
         <Link to="/" className="usopp">

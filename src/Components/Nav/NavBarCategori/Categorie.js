@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Categorie.scss';
 
-const Categorie = ({ data, color }) => {
+const Categorie = ({ data, color, setNewNav }) => {
   return (
     <div className={`categorie ${color}`}>
       <div className="leftCategorie">
@@ -15,9 +15,15 @@ const Categorie = ({ data, color }) => {
           <ul>
             {data.left.map(cate => (
               <li key={cate.id} className="leftList">
-                <Link className="leftName" to="/">
-                  {cate.name}
-                </Link>
+                {cate.url && (
+                  <Link
+                    className="leftName"
+                    to={cate.url}
+                    onClick={() => setNewNav(false)}
+                  >
+                    {cate.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

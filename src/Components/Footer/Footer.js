@@ -25,7 +25,7 @@ const Footer = () => {
         ))}
       </div>
       <div className="footerBottom">
-        <spa>© Usopp</spa>
+        <span>© Usopp</span>
         <div />
       </div>
     </>
