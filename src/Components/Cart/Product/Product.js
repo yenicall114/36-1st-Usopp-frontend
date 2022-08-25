@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { API } from '../../../pages/Main/RESTFULLAPI';
 import './Product.scss';
 
 const Product = ({
@@ -8,7 +9,7 @@ const Product = ({
   setProductData,
   productData,
 }) => {
-  const { product_id, name, size, quantity, price } = product;
+  const { product_id, id, name, size, quantity, price } = product;
 
   const sumPrice = price * quantity;
 
@@ -28,15 +29,15 @@ const Product = ({
     newList[idx].quantity = Number(e.target.innerText);
     setProductData([...newList]);
     setShowCount(true);
-    fetch('http://10.58.0.218:8000/carts', {
+    fetch(`http://${API}:3000/carts`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('Token'),
       },
       body: JSON.stringify({
-        quantity: '3',
-        productId: '2',
+        quantity: Number(e.target.innerText),
+        productId: product_id,
       }),
     });
   };
@@ -57,7 +58,7 @@ const Product = ({
               <i className="fi fi-rr-angle-small-down" />
             </button>
             {showBtn && (
-              <p className="deleteBtn" id={product_id} onClick={deletedList}>
+              <p className="deleteBtn" id={id} onClick={deletedList}>
                 삭제
               </p>
             )}

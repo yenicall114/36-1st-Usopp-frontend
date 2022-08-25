@@ -5,7 +5,7 @@ import SubProduct from './SubProudct';
 
 const Product = ({ item }) => {
   const { cname, category_description, product, setProduct } = item;
-  // console.log(product);
+
   return (
     <div className="content">
       <div className="info">

@@ -5,7 +5,7 @@ import { AiOutlinePlusCircle } from 'react-icons/ai';
 const Perfume = ({ Perfume, setNewAside, cartPost }) => {
   const { name, price, type, description, aromas, ingredient, size, id } =
     Perfume;
-
+  console.log(typeof id);
   return (
     <div className="PerfumeInformation">
       <header className="topHeader">

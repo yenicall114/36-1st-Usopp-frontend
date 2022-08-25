@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './ProductList.scss';
-
+import { API } from '../Main/RESTFULLAPI';
 const ProductList = () => {
   const { cid } = useParams();
   const [list, setList] = useState([]);
   useEffect(() => {
-    fetch(`http://10.58.0.58:3000/main/${cid}`)
+    fetch(`http://${API}:3000/main/${cid}`)
       .then(response => response.json())
       .then(data => setList(data[0]));
   }, [cid]);

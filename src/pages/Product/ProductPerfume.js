@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import Perfume from './Perfume';
+import { API } from '../Main/RESTFULLAPI';
 import './ProductPerfume.scss';
 
 const ProductPerfume = () => {
@@ -10,18 +11,18 @@ const ProductPerfume = () => {
   const [newAside, setNewAside] = useState(false);
 
   useEffect(() => {
-    fetch(`http://10.58.0.58:3000/main/detail/${num}`)
+    fetch(`http://${API}:3000/main/detail/${num}`)
       .then(response => response.json())
       .then(result => setData(result));
   }, [num]);
 
   const cartPost = e => {
     // API통신용;
-    fetch('http://10.58.0.218:8000/carts', {
+    fetch(`http://${API}:3000/carts`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
-        Authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('Token'),
       },
       body: JSON.stringify({
         productId: e.target.id,

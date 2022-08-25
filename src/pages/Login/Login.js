@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SignUp from './SignMode/SignUp';
 import SignIn from './SignMode/SignIn';
+import { API } from '../Main/RESTFULLAPI';
 import './Login.scss';
 
 const Login = ({ toglleCart }) => {
@@ -45,7 +46,7 @@ const Login = ({ toglleCart }) => {
 
   const confirm = e => {
     e.preventDefault();
-    fetch('http://127.0.0.1:3000/users/check', {
+    fetch(`http://${API}:3000/users/check`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -71,7 +72,7 @@ const Login = ({ toglleCart }) => {
 
   const goToSignIn = e => {
     e.preventDefault();
-    fetch('http://127.0.0.1:3000/users/signin', {
+    fetch(`http://${API}:3000/users/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -83,8 +84,8 @@ const Login = ({ toglleCart }) => {
     })
       .then(response => response.json())
       .then(data =>
-        data.accessToken
-          ? localStorage.setItem('Token', data.Token)
+        data.message
+          ? localStorage.setItem('Token', data.message)
           : alert('잘못된 회원 정보입니다.')
       );
   };
@@ -94,7 +95,7 @@ const Login = ({ toglleCart }) => {
 
     if (inputValue.password === inputValue.passwordConfirm) {
       if (checkBox.first === true && checkBox.second === true) {
-        fetch('http://127.0.0.1:3000/users/signup', {
+        fetch(`http://${API}:3000/users/signup`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -103,7 +104,7 @@ const Login = ({ toglleCart }) => {
             email: inputValue.email,
             password: inputValue.password,
             firstName: inputValue.firstName,
-            lsatName: inputValue.lastName,
+            lastName: inputValue.lastName,
           }),
         })
           .then(response => response.json())

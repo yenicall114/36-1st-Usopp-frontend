@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { API } from '../../pages/Main/RESTFULLAPI';
 import Product from './Product/Product';
+
 import './Cart.scss';
 
 const Cart = ({ toggleCart }) => {
@@ -8,18 +10,18 @@ const Cart = ({ toggleCart }) => {
   let totalSumPrice = 0;
 
   const deletedList = e => {
-    const cartId = e.target.id;
+    const id = e.target.id;
     setProductData(productData =>
       productData.filter(({ product_id }) => product_id !== Number(e.target.id))
     );
-    fetch('http://10.58.0.218:8000/carts', {
+    fetch(`http://${API}:3000/carts`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('Token'),
       },
       body: JSON.stringify({
-        cartId: cartId,
+        cartId: id,
       }),
     });
   };
@@ -29,7 +31,7 @@ const Cart = ({ toggleCart }) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('Token'),
       },
       body: JSON.stringify({
         userId: productData,
@@ -46,16 +48,17 @@ const Cart = ({ toggleCart }) => {
         deletedList={deletedList}
         productData={productData}
         setProductData={setProductData}
+        id={product.id}
       />
     );
   });
 
   useEffect(() => {
-    fetch('http://10.58.0.218:8000/carts', {
+    fetch(`http://${API}:3000/carts`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('Token'),
       },
     })
       .then(response => response.json())
