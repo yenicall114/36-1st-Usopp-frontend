@@ -16,6 +16,8 @@ const Nav = () => {
 
   const toggleCart = () => setShowCart(showCart => !showCart);
 
+  const Token = localStorage.getItem('data');
+  
   return (
     <>
       {showLogin && <Login toglleCart={toglleCart} />}
@@ -82,7 +84,7 @@ const Nav = () => {
             <nav className="subNav">
               <ul className="rightUl">
                 <button className="rightButton" onClick={toglleCart}>
-                  로그인
+                  {Token ? '우솝님' : '로그인'}
                 </button>
                 <button className="rightButton" onClick={toggleCart}>
                   카트
@@ -93,6 +95,7 @@ const Nav = () => {
 
           <div className={newNav ? 'perfume on' : 'perfume'}>
             <Categorie
+              setNewNav={setNewNav}
               color={NAVBARDATA_TEXT[menuState].backgroundColor}
               data={NAVBARDATA_TEXT[menuState].subMenu}
             />

@@ -17,7 +17,7 @@ const ProductList = () => {
         <>
           <div className="productList">
             <p className="info">{list.category_description}</p>
-            <div class="itemList">
+            <div className="itemList">
               <div className="productItem">
                 {list.product &&
                   list.product.map(list => (
