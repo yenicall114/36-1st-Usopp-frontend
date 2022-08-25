@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Categorie.scss';
 
 const Categorie = ({ data, color }) => {
@@ -6,17 +7,17 @@ const Categorie = ({ data, color }) => {
     <div className={`categorie ${color}`}>
       <div className="leftCategorie">
         <div className="titlle">
-          <a href="/" className="titlleName">
+          <Link to="/" className="titlleName">
             Usopp
-          </a>
+          </Link>
         </div>
         <div className="categorieLeft">
           <ul>
             {data.left.map(cate => (
               <li key={cate.id} className="leftList">
-                <a className="leftName" href="/">
+                <Link className="leftName" to="/">
                   {cate.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

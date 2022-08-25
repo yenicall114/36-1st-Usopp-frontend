@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.scss';
 import Product from './Proudct';
 import Filter from './Filter';
@@ -6,26 +7,14 @@ import Option from './Option';
 
 const Main = () => {
   const [data, setData] = useState([]);
-  const [link, setLink] = useState([]);
+
   const [filterBln, setFliterBln] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/Maindata.json')
-      .then(response => {
-        return response.json();
-      })
+    fetch('http://10.58.0.58:3000/main')
+      .then(response => response.json())
       .then(result => {
         setData(result);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/data/link.json')
-      .then(response => {
-        return response.json();
-      })
-      .then(result => {
-        setLink(result);
       });
   }, []);
 
@@ -41,12 +30,20 @@ const Main = () => {
         <h2 className="title">향수</h2>
         <nav className="lnb">
           <ul className="lnbInner">
-            {link.map((item, idx) => {
-              return (
-                <li key={idx}>
-                  <a href={item.link}>{item.title}</a>
-                </li>
-              );
+            {data.map((item, idx) => {
+              if (item.cid === 1) {
+                return (
+                  <li key={idx}>
+                    <Link to="/">{item.cname}</Link>
+                  </li>
+                );
+              } else {
+                return (
+                  <li key={idx}>
+                    <Link to={`../../main/${item.cid}`}>{item.cname}</Link>
+                  </li>
+                );
+              }
             })}
           </ul>
           <Filter filterChange={filterChange} />
@@ -55,7 +52,9 @@ const Main = () => {
           </div>
         </nav>
         {data.map((item, idx) => {
-          return <Product item={item} key={idx} />;
+          if (item.category_description) {
+            return <Product item={item} key={idx} />;
+          }
         })}
       </div>
 

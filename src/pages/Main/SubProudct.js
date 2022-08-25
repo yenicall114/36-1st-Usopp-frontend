@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Main.scss';
 
-const SubProduct = props => {
-  const { item } = props;
+const SubProduct = ({ item }) => {
+  const { url, cid, type, price } = item;
 
   return (
     <li>
-      <a href="http://localhost:3000/main">
+      <Link to={`/main/detail/${cid}`}>
         <div className="imgBox">
-          <img className="img" src={item.SubImgSrc} alt="로즈향수이미지" />
+          <img className="img" src={url} alt="로즈향수이미지" />
         </div>
-        <div className="title">{item.subTitle2}</div>
-        <div className="price">{item.price2}</div>
-      </a>
+        <div className="title">{type}</div>
+        <div className="price">{price}</div>
+      </Link>
     </li>
   );
 };
