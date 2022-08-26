@@ -88,6 +88,7 @@ const Login = ({ toglleCart }) => {
           ? localStorage.setItem('Token', data.message)
           : alert('잘못된 회원 정보입니다.')
       );
+    toglleCart();
   };
 
   const goToSignUP = e => {

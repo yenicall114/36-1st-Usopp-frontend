@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './ProductList.scss';
 import { API } from '../Main/RESTFULLAPI';
+
 const ProductList = () => {
   const { cid } = useParams();
   const [list, setList] = useState([]);

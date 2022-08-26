@@ -96,6 +96,7 @@ const Nav = () => {
           <div className={newNav ? 'perfume on' : 'perfume'}>
             <Categorie
               setNewNav={setNewNav}
+              setListNow={setListNow}
               color={NAVBARDATA_TEXT[menuState].backgroundColor}
               data={NAVBARDATA_TEXT[menuState].subMenu}
             />

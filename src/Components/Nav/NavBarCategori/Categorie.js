@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Categorie.scss';
 
-const Categorie = ({ data, color, setNewNav }) => {
+const Categorie = ({ data, color, setNewNav, setListNow }) => {
   return (
     <div className={`categorie ${color}`}>
       <div className="leftCategorie">
@@ -19,7 +19,10 @@ const Categorie = ({ data, color, setNewNav }) => {
                   <Link
                     className="leftName"
                     to={cate.url}
-                    onClick={() => setNewNav(false)}
+                    onClick={() => {
+                      setNewNav(false);
+                      setListNow(false);
+                    }}
                   >
                     {cate.name}
                   </Link>

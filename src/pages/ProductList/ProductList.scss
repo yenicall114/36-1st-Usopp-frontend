@@ -4,9 +4,10 @@
   .productList {
     display: flex;
     justify-content: space-evenly;
+    // justify-content: flex-start;
     .info {
-      font-size: 14px;
-      width: 50%;
+      font-size: 20px;
+      width: 30%;
       margin-top: 80px;
       padding: 0 30px;
       color: #252525;
@@ -21,7 +22,7 @@
       .productItem {
         text-align: center;
         padding: 30px;
-        width: 50%;
+        width: 100%;
         cursor: pointer;
         transition: 0.5s;
         &:hover {

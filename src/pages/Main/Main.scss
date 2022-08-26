@@ -1,14 +1,17 @@
 .gnb {
   padding: 20px 0;
+  padding-top: 5%;
   width: 100%;
-  font-size: 30px;
-  text-align: center;
+  font-size: 50px;
+  background-color: #fffef2;
   border-bottom: 2px dostted #999;
+  // font-family: ‘Lobster’, cursive;
 }
 .main {
   & > .title {
     padding: 20px 40px;
     font-size: 24px;
+    background-color: #fffef2;
   }
   .lnb {
     position: relative;
