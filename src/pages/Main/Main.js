@@ -26,7 +26,6 @@ const Main = () => {
   return (
     <div className="mainWrap">
       <div className="gnb" />
-
       <div className="main">
         <h2 className="title">향수</h2>
         <nav className="lnb">
