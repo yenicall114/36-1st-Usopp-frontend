@@ -4,12 +4,13 @@ import './Product.scss';
 
 const Product = ({
   idx,
+  id,
   product,
   deletedList,
   setProductData,
   productData,
 }) => {
-  const { product_id, id, name, size, quantity, price } = product;
+  const { product_id, name, size, quantity, price } = product;
 
   const sumPrice = price * quantity;
 

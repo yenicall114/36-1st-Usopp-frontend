@@ -3,8 +3,20 @@ import './Perfume.scss';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
 const Perfume = ({ Perfume, setNewAside, cartPost }) => {
-  const { name, price, type, description, aromas, ingredient, size, id } =
-    Perfume;
+  const {
+    name,
+    price,
+    type,
+    description,
+    aromas,
+    ingredient,
+    size,
+    productId,
+  } = Perfume;
+  console.log(productId);
+  const cartChage = () => {
+    console.log(document.querySelector('.rightButton'));
+  };
 
   return (
     <div className="PerfumeInformation">
@@ -43,7 +55,7 @@ const Perfume = ({ Perfume, setNewAside, cartPost }) => {
           <li className="PerfumeLi">{size} ml</li>
         </ul>
       </div>
-      <button id={id} onClick={cartPost} className="productCart">
+      <button id={productId} onClick={cartPost} className="productCart">
         <span className="buttonText">카트에 추가하기-₩{price}</span>
       </button>
     </div>

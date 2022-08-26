@@ -6,7 +6,7 @@ import './Cart.scss';
 
 const Cart = ({ toggleCart }) => {
   const [productData, setProductData] = useState([]);
-
+  console.log(productData);
   let totalSumPrice = 0;
 
   const deletedList = e => {
@@ -40,6 +40,7 @@ const Cart = ({ toggleCart }) => {
 
   const productList = productData.map((product, idx) => {
     totalSumPrice += product.price * product.quantity;
+
     return (
       <Product
         key={idx}
@@ -48,7 +49,7 @@ const Cart = ({ toggleCart }) => {
         deletedList={deletedList}
         productData={productData}
         setProductData={setProductData}
-        id={product.id}
+        id={product.prouct_id}
       />
     );
   });
@@ -64,7 +65,7 @@ const Cart = ({ toggleCart }) => {
       .then(response => response.json())
       .then(setProductData);
   }, []);
-
+  console.log(setProductData);
   return (
     <div className="cart" onMouseLeave={toggleCart}>
       {productList.length === 0 ? (

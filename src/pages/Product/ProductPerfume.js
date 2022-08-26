@@ -29,6 +29,11 @@ const ProductPerfume = () => {
       }),
     });
     alert('장바구니에 추가되었습니다!');
+
+    const btn = document.getElementById('cart');
+    console.log(btn);
+
+    btn.innerHTML = '카트1';
   };
 
   return (

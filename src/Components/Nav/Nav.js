@@ -86,7 +86,7 @@ const Nav = () => {
                 <button className="rightButton" onClick={toglleCart}>
                   {Token ? '우솝님' : '로그인'}
                 </button>
-                <button className="rightButton" onClick={toggleCart}>
+                <button id="cart" className="rightButton" onClick={toggleCart}>
                   카트
                 </button>
               </ul>
