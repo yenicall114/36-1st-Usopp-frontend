@@ -12,9 +12,7 @@
 
 # <br />
 
- # 구현 영상
- 
- https://wecode-bootcamp.slack.com/files/U03JHPLGQQJ/F03V9UQHX43/_________________________________________________.mp4
+
 
 
 
