@@ -54,11 +54,11 @@ const Product = ({
         {showCount ? (
           <>
             <button className="quantity" type="number" onClick={showCountList}>
-              <p className="btnCount">{product_id}</p>
+              <p className="btnCount">{quantity}</p>
               <i className="fi fi-rr-angle-small-down" />
             </button>
             {showBtn && (
-              <p className="deleteBtn" id={id} onClick={deletedList}>
+              <p className="deleteBtn" id={product_id} onClick={deletedList}>
                 삭제
               </p>
             )}

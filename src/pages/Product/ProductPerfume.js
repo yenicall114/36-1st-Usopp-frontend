@@ -28,6 +28,7 @@ const ProductPerfume = () => {
         productId: e.target.id,
       }),
     });
+    alert('장바구니에 추가되었습니다!');
   };
 
   return (

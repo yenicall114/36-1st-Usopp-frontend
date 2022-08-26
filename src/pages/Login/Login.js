@@ -84,8 +84,8 @@ const Login = ({ toglleCart }) => {
     })
       .then(response => response.json())
       .then(data =>
-        data.message
-          ? localStorage.setItem('Token', data.message)
+        data.Token
+          ? localStorage.setItem('Token', data.Token)
           : alert('잘못된 회원 정보입니다.')
       );
     toglleCart();
